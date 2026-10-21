@@ -8,14 +8,33 @@
         VALUES (#{username},#{name},#{gender},#{phone},#{job},#{salary},#{image},#{entry_date},#{dept_id},#{create_time},#{update_time})
     </insert>
 
-    <delete id="deleteById">
+    <delete id="deleteByIds">
         delete
         from tlias.emp
-        where id = #{id}
+        <foreach collection="ids" item="id" separator="or">
+            where id = #{id}
+        </foreach>
     </delete>
 
     <select id="countAll" resultType="java.lang.Long">
         select count(*)
+        from tlias.emp e
+                 left join tlias.dept d on e.dept_id = d.id
+    </select>
+    <select id="findAll" resultType="com.imlyb.tlias.pojo.Emp">
+        select e.id,
+               e.username,
+               e.name,
+               e.gender,
+               e.phone,
+               e.job,
+               e.salary,
+               e.image,
+               e.entry_date,
+               e.dept_id,
+               e.create_time,
+               e.update_time,
+               d.name as dept_name
         from tlias.emp e
                  left join tlias.dept d on e.dept_id = d.id
     </select>

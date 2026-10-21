@@ -1,7 +1,6 @@
 package com.imlyb.tlias.service.impl;
 
 import com.github.pagehelper.Page;
-import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.page.PageMethod;
 import com.imlyb.tlias.mapper.EmpExprMapper;
 import com.imlyb.tlias.mapper.EmpMapper;
@@ -29,8 +28,6 @@ public class EmpServiceImpl implements EmpService {
         this.empLogService = empLogService;
     }
 
-
-
     /*@Override
     public PageResult<Emp> page(Integer page, Integer pageSize) {
         PageResult<Emp> empPageResult = new PageResult<>();
@@ -52,11 +49,13 @@ public class EmpServiceImpl implements EmpService {
         return new PageResult<>(p.getTotal(), p.getResult());
     }
 
+    @Transactional
     @Override
-    public void deleteByIds(Integer[] ids) {
-        for (Integer id : ids) {
-            empMapper.deleteById(id);
-        }
+    public void deleteByIds(List<Integer> ids) {
+
+            empMapper.deleteByIds(ids);
+            empExprMapper.deleteByEmpIds(ids);
+
     }
 
     @Override

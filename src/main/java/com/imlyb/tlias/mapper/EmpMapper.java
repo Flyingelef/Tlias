@@ -14,7 +14,7 @@ public interface EmpMapper {
 
     Long countAll();
 
-    void deleteById(Integer id);
+    void deleteByIds(List<Integer> ids);
 
     @Options(useGeneratedKeys = true , keyProperty = "id")
     void createEmp(Emp emp);

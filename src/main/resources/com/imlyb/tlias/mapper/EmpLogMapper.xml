@@ -6,6 +6,5 @@
 
     <insert id="insert">
         insert into emp_log (operate_time, info) values (#{operateTime},#{info})
-
     </insert>
 </mapper>

@@ -6,7 +6,10 @@ import com.imlyb.tlias.pojo.Result;
 import com.imlyb.tlias.service.EmpService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -26,12 +29,12 @@ public class EmpController {
     }
 
     @DeleteMapping("/emps")
-    public Result deleteByIds(@RequestParam Integer[] ids) {
+    public Result deleteByIds(List<Integer> ids) {
         empService.deleteByIds(ids);
         return Result.success();
     }
 
-
+    @Transactional
     @PostMapping("/emps")
     public Result createEmp(@RequestBody Emp emp) {
         empService.createEmp(emp);
