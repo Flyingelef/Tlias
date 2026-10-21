@@ -1,0 +1,42 @@
+package com.imlyb.tlias.controller;
+
+import com.imlyb.tlias.pojo.Emp;
+import com.imlyb.tlias.pojo.EmpQueryParam;
+import com.imlyb.tlias.pojo.Result;
+import com.imlyb.tlias.service.EmpService;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+@Slf4j
+@RestController
+public class EmpController {
+    private final EmpService empService;
+
+    @Autowired
+    public EmpController(EmpService empService) {
+        this.empService = empService;
+    }
+
+    //分页查询员工信息
+    @GetMapping("/emps")
+    public Result list(EmpQueryParam e) {
+        log.info("获取员工列表");
+        return Result.success(empService.page(e));
+    }
+
+    @DeleteMapping("/emps")
+    public Result deleteByIds(@RequestParam Integer[] ids) {
+        empService.deleteByIds(ids);
+        return Result.success();
+    }
+
+
+    @PostMapping("/emps")
+    public Result createEmp(@RequestBody Emp emp) {
+        empService.createEmp(emp);
+        return Result.success();
+    }
+
+
+}

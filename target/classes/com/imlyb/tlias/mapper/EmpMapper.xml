@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.imlyb.tlias.mapper.EmpMapper">
+    <insert id="createEmp">
+        insert into emp(username, name, gender, phone, job, salary, image, entry_date, dept_id, create_time, update_time)
+        VALUES (#{username},#{name},#{gender},#{phone},#{job},#{salary},#{image},#{entry_date},#{dept_id},#{create_time},#{update_time})
+    </insert>
+
+    <delete id="deleteById">
+        delete
+        from tlias.emp
+        where id = #{id}
+    </delete>
+
+    <select id="findAll" resultType="com.imlyb.tlias.pojo.Emp">
+        select e.*, d.name deptName
+        from tlias.emp e
+        left join dept d on e.dept_id = d.id
+        <where>
+            <if test="gender!=null">
+                e.gender = #{gender}
+            </if>
+            <if test="name != null and name != ''">
+                and e.name like concat("%", #{name}, "%")
+            </if>
+            <if test="begin != null and end !=null">
+                and e.update_time between #{begin} and #{end}
+            </if>
+        </where>
+        order by e.update_time desc
+    </select>
+
+    <select id="countAll" resultType="java.lang.Long">
+        select count(*)
+        from tlias.emp e
+                 left join tlias.dept d on e.dept_id = d.id
+    </select>
+
+</mapper>
