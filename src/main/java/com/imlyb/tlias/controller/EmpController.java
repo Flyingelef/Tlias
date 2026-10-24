@@ -28,6 +28,13 @@ public class EmpController {
         return Result.success(empService.page(e));
     }
 
+    @GetMapping("/emps/{id}")
+    public Result getEmpById(@PathVariable Integer id) {
+        log.info("获取员工信息:{}", id);
+        Emp emp = empService.getEmpById(id);
+        return Result.success(emp);
+    }
+
     @DeleteMapping("/emps")
     public Result deleteByIds(List<Integer> ids) {
         empService.deleteByIds(ids);

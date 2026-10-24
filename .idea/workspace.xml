@@ -4,18 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71e3ec6f-ab80-4664-a76c-9dba73922214" name="更改" comment="事务中断">
-      <change afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/TliasApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="71e3ec6f-ab80-4664-a76c-9dba73922214" name="更改" comment="批量删除">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/controller/UploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ea43fff-d3f3-42a4-b472-0cf4309f0d09.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3ea43fff-d3f3-42a4-b472-0cf4309f0d09.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/tlias.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/tlias.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/tlias.log.2026-10-14.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/controller/EmpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/controller/EmpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/mapper/EmpExprMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/mapper/EmpExprMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/mapper/EmpMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/mapper/EmpMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/service/EmpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/service/EmpService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/service/impl/EmpServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/service/impl/EmpServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/imlyb/tlias/mapper/EmpExprMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/imlyb/tlias/mapper/EmpExprMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/imlyb/tlias/mapper/EmpLogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/imlyb/tlias/mapper/EmpLogMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/imlyb/tlias/mapper/EmpMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/imlyb/tlias/mapper/EmpMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/controller/EmpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/controller/EmpController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/mapper/EmpExprMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/mapper/EmpExprMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/mapper/EmpExprMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/mapper/EmpExprMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/mapper/EmpMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/mapper/EmpMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/mapper/EmpMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/mapper/EmpMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/service/EmpService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/service/EmpService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/service/impl/DeptServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/service/impl/DeptServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/service/impl/EmpServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/service/impl/EmpServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,61 +69,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="6.126509001049681E-13" />
-      <entry key="MS500" value="0.003609463173620404" />
-      <entry key="S2" value="0.24510978769583555" />
-      <entry key="S5" value="0.5698286244008735" />
-      <entry key="S10" value="0.7548699389261051" />
-      <entry key="S30" value="0.9125207035043458" />
-      <entry key="S60" value="1.1012401383508805" />
-      <entry key="M2" value="2.4457709530884624" />
-      <entry key="M5" value="7.536887901047995" />
-      <entry key="M10" value="12.228580383518866" />
-      <entry key="M15" value="14.54704676230228" />
-      <entry key="M30" value="17.420522765085373" />
-      <entry key="H1" value="19.748890691008505" />
-      <entry key="H2" value="33.50878369797031" />
-      <entry key="H4" value="98.4997696416403" />
-      <entry key="D1" value="614.6045291549465" />
-      <entry key="W1" value="972.2178603462282" />
+      <entry key="MS100" value="1.3551273772036855E-300" />
+      <entry key="MS500" value="1.0626642106352851E-60" />
+      <entry key="S2" value="1.0349514015717307E-15" />
+      <entry key="S5" value="1.3589513736863581E-6" />
+      <entry key="S10" value="0.0021866415590118945" />
+      <entry key="S30" value="0.5655847990408595" />
+      <entry key="S60" value="2.9969282445162486" />
+      <entry key="M2" value="7.494156456464514" />
+      <entry key="M5" value="13.398255883918885" />
+      <entry key="M10" value="16.484920975500497" />
+      <entry key="M15" value="18.107043136130187" />
+      <entry key="M30" value="21.554915918686984" />
+      <entry key="H1" value="25.993800731917165" />
+      <entry key="H2" value="37.75368219177446" />
+      <entry key="H4" value="72.42271557256235" />
+      <entry key="D1" value="525.7689348569994" />
+      <entry key="W1" value="1101.803669707714" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0000000000213858" />
-      <entry key="S30" value="1.0003611560059598" />
-      <entry key="S60" value="1.0298916717975966" />
-      <entry key="M2" value="1.3192456399246655" />
-      <entry key="M5" value="2.7072155990686126" />
-      <entry key="M10" value="4.326159349177537" />
-      <entry key="M15" value="5.22422479630604" />
-      <entry key="M30" value="6.414639437421848" />
-      <entry key="H1" value="7.590068425069261" />
-      <entry key="H2" value="16.13584965433307" />
-      <entry key="H4" value="56.010361966316026" />
-      <entry key="D1" value="383.9261117855742" />
-      <entry key="W1" value="618.463043882403" />
+      <entry key="MS500" value="1.0000010993649797" />
+      <entry key="S2" value="1.0500358469557913" />
+      <entry key="S5" value="1.4537038178927417" />
+      <entry key="S10" value="1.954633639282417" />
+      <entry key="S30" value="3.0806649721891" />
+      <entry key="S60" value="4.890242161129505" />
+      <entry key="M2" value="7.388456490402505" />
+      <entry key="M5" value="10.18234242364169" />
+      <entry key="M10" value="11.61128422430813" />
+      <entry key="M15" value="12.589194232809744" />
+      <entry key="M30" value="15.342221250265768" />
+      <entry key="H1" value="19.223422446028344" />
+      <entry key="H2" value="27.683185114735867" />
+      <entry key="H4" value="49.78176941748708" />
+      <entry key="D1" value="333.406825491981" />
+      <entry key="W1" value="703.6381305172264" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.5279195377788344E-6" />
-      <entry key="MS500" value="0.06982373522866424" />
-      <entry key="S2" value="0.6958880396674232" />
-      <entry key="S5" value="1.2730713139145664" />
-      <entry key="S10" value="1.5874292926725961" />
-      <entry key="S30" value="1.8519319104886647" />
-      <entry key="S60" value="2.0983049732364587" />
-      <entry key="M2" value="3.7396637152305643" />
-      <entry key="M5" value="10.215687628096694" />
-      <entry key="M10" value="16.529717198385466" />
-      <entry key="M15" value="19.750607527928974" />
-      <entry key="M30" value="23.822205797675537" />
-      <entry key="H1" value="27.33139465211128" />
-      <entry key="H2" value="49.637892422121105" />
-      <entry key="H4" value="154.49985009792613" />
-      <entry key="D1" value="998.5194783711239" />
-      <entry key="W1" value="1590.6783286502555" />
+      <entry key="MS100" value="6.679038703984003E-5" />
+      <entry key="MS500" value="0.14619881191041048" />
+      <entry key="S2" value="0.6555678049903136" />
+      <entry key="S5" value="1.2275120889047648" />
+      <entry key="S10" value="1.8089574829928492" />
+      <entry key="S30" value="3.545268707226968" />
+      <entry key="S60" value="7.767053966405664" />
+      <entry key="M2" value="14.768550763367983" />
+      <entry key="M5" value="23.509653260685464" />
+      <entry key="M10" value="28.054215454029364" />
+      <entry key="M15" value="30.665413558974635" />
+      <entry key="M30" value="36.87788984845572" />
+      <entry key="H1" value="45.204998530001134" />
+      <entry key="H2" value="65.42829920656888" />
+      <entry key="H4" value="122.1970129335739" />
+      <entry key="D1" value="859.1665543575867" />
+      <entry key="W1" value="1805.4389523420375" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -121,49 +131,52 @@
   &quot;fromUser&quot;: false
 }</component>
   <component name="ProjectId" id="3KdLxt9WBWIafoJK3vJZFK8virf" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "Spring Boot.TliasApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Projects/Tlias/paper",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.jshint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.jshint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "项目",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "sonarlint",
-    "应用程序.EmpDemo.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;Spring Boot.TliasApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Tlias/paper&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;sonarlint&quot;,
+    &quot;应用程序.EmpDemo.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.imlyb.tlias.pojo" />
@@ -243,7 +256,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="事务中断" />
-    <option name="LAST_COMMIT_MESSAGE" value="事务中断" />
+    <MESSAGE value="批量删除1" />
+    <MESSAGE value="批量删除" />
+    <option name="LAST_COMMIT_MESSAGE" value="批量删除" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

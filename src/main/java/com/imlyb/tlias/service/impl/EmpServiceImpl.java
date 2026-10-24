@@ -52,10 +52,10 @@ public class EmpServiceImpl implements EmpService {
     @Transactional
     @Override
     public void deleteByIds(List<Integer> ids) {
-
+        if (!CollectionUtils.isEmpty(ids)) {
             empMapper.deleteByIds(ids);
             empExprMapper.deleteByEmpIds(ids);
-
+        }
     }
 
     @Override
@@ -74,10 +74,21 @@ public class EmpServiceImpl implements EmpService {
                 empExprMapper.insertBatch(exprList);
             }
         } finally {
-            EmpLog empLog = new EmpLog(null, LocalDateTime.now(), "新增员工"+emp);
+            EmpLog empLog = new EmpLog(null, LocalDateTime.now(), "新增员工" + emp);
             empLogService.insertLog(empLog);
         }
 
+    }
+
+    @Override
+    public Emp getEmpById(Integer id) {
+        /*1.普通方式
+        if (emp != null) {
+            emp.setExprList(empExprMapper.getEmpExprByEmpId(id));
+        }*/
+        //2.resultMap结果集映射方式
+
+        return empMapper.getEmpById(id);
     }
 
 }

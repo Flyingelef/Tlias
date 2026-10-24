@@ -7,7 +7,10 @@ import java.util.List;
 
 @Mapper
 public interface EmpExprMapper {
+    List<EmpExpr> getEmpExprByEmpId(Integer empId);
+
     void insertBatch(List<EmpExpr> exprList);
 
     void deleteByEmpIds(List<Integer> empIds);
+
 }

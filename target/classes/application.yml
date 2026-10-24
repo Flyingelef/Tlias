@@ -13,6 +13,7 @@ mybatis:
     map-underscore-to-camel-case: true
 logging:
   level:
+    org.springframework.jdbc.support.JdbcTransactionManager: debug
     # 打印项目里的类（DEBUG详细信息）
     com.imlyb.tlias: debug
   file:

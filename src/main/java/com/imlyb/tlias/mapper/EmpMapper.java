@@ -10,6 +10,8 @@ import java.util.List;
 @Mapper
 public interface EmpMapper {
 
+    Emp getEmpById(Integer id);
+
     List<Emp> findAll(EmpQueryParam e);
 
     Long countAll();

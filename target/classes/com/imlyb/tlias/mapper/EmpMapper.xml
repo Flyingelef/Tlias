@@ -4,38 +4,78 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.imlyb.tlias.mapper.EmpMapper">
     <insert id="createEmp">
-        insert into emp(username, name, gender, phone, job, salary, image, entry_date, dept_id, create_time, update_time)
-        VALUES (#{username},#{name},#{gender},#{phone},#{job},#{salary},#{image},#{entry_date},#{dept_id},#{create_time},#{update_time})
+        insert into emp(username, name, gender, phone, job, salary, image, entry_date, dept_id, create_time,
+                        update_time)
+        VALUES (#{username}, #{name}, #{gender}, #{phone}, #{job}, #{salary}, #{image}, #{entry_date}, #{dept_id},
+                #{create_time}, #{update_time})
     </insert>
 
-    <delete id="deleteById">
+    <delete id="deleteByIds">
         delete
         from tlias.emp
-        where id = #{id}
+        <foreach collection="ids" item="id" separator="or">
+            where id = #{id}
+        </foreach>
     </delete>
-
-    <select id="findAll" resultType="com.imlyb.tlias.pojo.Emp">
-        select e.*, d.name deptName
-        from tlias.emp e
-        left join dept d on e.dept_id = d.id
-        <where>
-            <if test="gender!=null">
-                e.gender = #{gender}
-            </if>
-            <if test="name != null and name != ''">
-                and e.name like concat("%", #{name}, "%")
-            </if>
-            <if test="begin != null and end !=null">
-                and e.update_time between #{begin} and #{end}
-            </if>
-        </where>
-        order by e.update_time desc
-    </select>
 
     <select id="countAll" resultType="java.lang.Long">
         select count(*)
         from tlias.emp e
                  left join tlias.dept d on e.dept_id = d.id
+    </select>
+    <select id="findAll" resultType="com.imlyb.tlias.pojo.Emp">
+        select e.id,
+               e.username,
+               e.name,
+               e.gender,
+               e.phone,
+               e.job,
+               e.salary,
+               e.image,
+               e.entry_date,
+               e.dept_id,
+               e.create_time,
+               e.update_time,
+               d.name as dept_name
+        from tlias.emp e
+                 left join tlias.dept d on e.dept_id = d.id
+    </select>
+    <resultMap id="empResultMap" type="com.imlyb.tlias.pojo.Emp">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="gender" property="gender"/>
+        <result column="phone" property="phone"/>
+        <result column="job" property="job"/>
+        <result column="salary" property="salary"/>
+        <result column="image" property="image"/>
+        <result column="entryDate" property="entryDate"/>
+        <result column="deptId" property="deptId"/>
+        <result column="deptName" property="deptName"/>
+        <result column="createTime" property="createTime"/>
+        <result column="updateTime" property="updateTime"/>
+        <collection property="exprList" ofType="com.imlyb.tlias.pojo.EmpExpr">
+            <id column="ee_id" property="id"/>
+            <result column="ee_emp_id" property="empId"/>
+            <result column="ee_begin" property="begin"/>
+            <result column="ee_end" property="end"/>
+            <result column="ee_company" property="company"/>
+            <result column="job" property="job" />
+        </collection>
+    </resultMap>
+
+    <select id="getEmpById" resultMap="empResultMap">
+        select e.*
+             , ee.id      ee_id
+             , ee.emp_id  ee_emp_id
+             , ee.begin   ee_begin
+             , ee.end     ee_end
+             , ee.company ee_company
+             , ee.job     ee_job
+        from emp e
+                 left join emp_expr ee on e.id = ee.emp_id
+        where e.id = #{id}
     </select>
 
 </mapper>

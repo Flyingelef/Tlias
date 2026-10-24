@@ -16,4 +16,7 @@
             #{empId}
         </foreach>
     </delete>
+<!--    <select id="getEmpExprByEmpId" resultType="com.imlyb.tlias.pojo.EmpExpr">-->
+<!--        select * from emp_expr where emp_id = #{empId}-->
+<!--    </select>-->
 </mapper>

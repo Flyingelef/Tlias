@@ -1,73 +1,43 @@
-2026-10-17T10:13:16.883+08:00  INFO 6572 --- [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 6572 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
-2026-10-17T10:13:16.896+08:00 DEBUG 6572 --- [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
-2026-10-17T10:13:16.902+08:00  INFO 6572 --- [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-10-17T10:13:19.374+08:00  INFO 6572 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-10-17T10:13:19.406+08:00  INFO 6572 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-17T10:13:19.407+08:00  INFO 6572 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
-2026-10-17T10:13:19.492+08:00  INFO 6572 --- [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2422 ms
-2026-10-17T10:13:20.809+08:00  INFO 6572 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-10-17T10:13:20.819+08:00  INFO 6572 --- [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 5.108 seconds (process running for 6.718)
-2026-10-17T10:14:19.990+08:00  INFO 6572 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-17T10:14:19.990+08:00  INFO 6572 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-17T10:14:19.992+08:00  INFO 6572 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-10-17T10:14:20.046+08:00  INFO 6572 --- [http-nio-8080-exec-2] c.imlyb.tlias.controller.EmpController   : 获取员工列表
-2026-10-17T10:14:20.143+08:00  INFO 6572 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-17T10:14:20.443+08:00  INFO 6572 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3dcfb8a1
-2026-10-17T10:14:20.445+08:00  INFO 6572 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-17T10:14:20.456+08:00 DEBUG 6572 --- [http-nio-8080-exec-2] c.i.t.mapper.EmpMapper.findAll_COUNT     : ==>  Preparing: SELECT count(0) FROM tlias.emp e LEFT JOIN dept d ON e.dept_id = d.id
-2026-10-17T10:14:20.488+08:00 DEBUG 6572 --- [http-nio-8080-exec-2] c.i.t.mapper.EmpMapper.findAll_COUNT     : ==> Parameters: 
-2026-10-17T10:14:20.565+08:00 DEBUG 6572 --- [http-nio-8080-exec-2] c.i.t.mapper.EmpMapper.findAll_COUNT     : <==      Total: 1
-2026-10-17T10:14:20.573+08:00 DEBUG 6572 --- [http-nio-8080-exec-2] c.imlyb.tlias.mapper.EmpMapper.findAll   : ==>  Preparing: select e.*,d.name deptName from tlias.emp e left join dept d on e.dept_id = d.id order by e.update_time desc; LIMIT ?, ?
-2026-10-17T10:14:20.575+08:00 DEBUG 6572 --- [http-nio-8080-exec-2] c.imlyb.tlias.mapper.EmpMapper.findAll   : ==> Parameters: 5(Long), 5(Integer)
-2026-10-17T10:14:20.821+08:00 ERROR 6572 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.jdbc.BadSqlGrammarException: 
-### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 5, 5' at line 1
-### The error may exist in com/imlyb/tlias/mapper/EmpMapper.xml
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: select e.*,d.name deptName from tlias.emp e left join dept d on e.dept_id = d.id                     order by e.update_time desc;  LIMIT ?, ?
-### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 5, 5' at line 1
-; bad SQL grammar []] with root cause
+2026-10-22T00:13:52.268+08:00  INFO 7188 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 7188 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
+2026-10-22T00:13:52.281+08:00 DEBUG 7188 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
+2026-10-22T00:13:52.283+08:00  INFO 7188 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-10-22T00:13:54.564+08:00  INFO 7188 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-22T00:13:54.595+08:00  INFO 7188 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-22T00:13:54.597+08:00  INFO 7188 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-22T00:13:54.682+08:00  INFO 7188 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2232 ms
+2026-10-22T00:13:57.999+08:00  INFO 7188 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-22T00:13:58.011+08:00  INFO 7188 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 6.831 seconds (process running for 8.354)
+2026-10-22T00:17:07.550+08:00  INFO 7188 --- [Tlias] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-22T00:17:07.551+08:00  INFO 7188 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-22T00:17:07.552+08:00  INFO 7188 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-22T00:17:07.650+08:00  INFO 7188 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-22T00:17:07.957+08:00  INFO 7188 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13101666
+2026-10-22T00:17:07.961+08:00  INFO 7188 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-22T00:17:07.978+08:00 DEBUG 7188 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.* from tlias.emp e where e.id = ?;
+2026-10-22T00:17:08.019+08:00 DEBUG 7188 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
+2026-10-22T00:17:08.072+08:00 DEBUG 7188 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
+2026-10-22T00:17:08.080+08:00 DEBUG 7188 --- [Tlias] [http-nio-8080-exec-1] c.i.t.m.EmpExprMapper.getEmpExprByEmpId  : ==>  Preparing: select * from emp_expr where emp_id = ?
+2026-10-22T00:17:08.081+08:00 DEBUG 7188 --- [Tlias] [http-nio-8080-exec-1] c.i.t.m.EmpExprMapper.getEmpExprByEmpId  : ==> Parameters: 1(Integer)
+2026-10-22T00:17:08.083+08:00 DEBUG 7188 --- [Tlias] [http-nio-8080-exec-1] c.i.t.m.EmpExprMapper.getEmpExprByEmpId  : <==      Total: 0
+2026-10-22T00:17:08.089+08:00 ERROR 7188 --- [Tlias] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.imlyb.tlias.pojo.Emp.setExprList(java.util.List)" because "emp" is null] with root cause
 
-java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 5, 5' at line 1
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-26.7.0.jar:26.7.0]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-26.7.0.jar:26.7.0]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988) ~[mysql-connector-j-26.7.0.jar:26.7.0]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:383) ~[mysql-connector-j-26.7.0.jar:26.7.0]
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-7.0.2.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) ~[HikariCP-7.0.2.jar:na]
+java.lang.NullPointerException: Cannot invoke "com.imlyb.tlias.pojo.Emp.setExprList(java.util.List)" because "emp" is null
+	at com.imlyb.tlias.service.impl.EmpServiceImpl.getEmpById(EmpServiceImpl.java:86) ~[classes/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58) ~[mybatis-3.5.19.jar:3.5.19]
-	at jdk.proxy3/jdk.proxy3.$Proxy82.execute(Unknown Source) ~[na:na]
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65) ~[mybatis-3.5.19.jar:3.5.19]
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80) ~[mybatis-3.5.19.jar:3.5.19]
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:65) ~[mybatis-3.5.19.jar:3.5.19]
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336) ~[mybatis-3.5.19.jar:3.5.19]
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158) ~[mybatis-3.5.19.jar:3.5.19]
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110) ~[mybatis-3.5.19.jar:3.5.19]
-	at com.github.pagehelper.util.ExecutorUtil.pageQuery(ExecutorUtil.java:215) ~[pagehelper-6.1.1.jar:na]
-	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:162) ~[pagehelper-6.1.1.jar:na]
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:59) ~[mybatis-3.5.19.jar:3.5.19]
-	at jdk.proxy2/jdk.proxy2.$Proxy80.query(Unknown Source) ~[na:na]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154) ~[mybatis-3.5.19.jar:3.5.19]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.19.jar:3.5.19]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:715) ~[spring-aop-7.0.9.jar:7.0.9]
+	at com.imlyb.tlias.service.impl.EmpServiceImpl$$SpringCGLIB$$0.getEmpById(<generated>) ~[classes/:na]
+	at com.imlyb.tlias.controller.EmpController.getEmpById(EmpController.java:32) ~[classes/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:348) ~[mybatis-spring-4.0.0.jar:4.0.0]
-	at jdk.proxy2/jdk.proxy2.$Proxy68.selectList(Unknown Source) ~[na:na]
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:209) ~[mybatis-spring-4.0.0.jar:4.0.0]
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147) ~[mybatis-3.5.19.jar:3.5.19]
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80) ~[mybatis-3.5.19.jar:3.5.19]
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141) ~[mybatis-3.5.19.jar:3.5.19]
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.19.jar:3.5.19]
-	at jdk.proxy2/jdk.proxy2.$Proxy70.findAll(Unknown Source) ~[na:na]
-	at com.imlyb.tlias.service.impl.EmpServiceImpl.page(EmpServiceImpl.java:37) ~[classes/:na]
-	at com.imlyb.tlias.controller.EmpController.list(EmpController.java:23) ~[classes/:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:715) ~[spring-aop-7.0.9.jar:7.0.9]
+	at com.imlyb.tlias.controller.EmpController$$SpringCGLIB$$0.getEmpById(<generated>) ~[classes/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
@@ -114,113 +84,289 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
 	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
 
-2026-10-17T10:30:20.010+08:00  INFO 6572 --- [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-17T10:30:20.079+08:00  INFO 6572 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-17T10:30:20.084+08:00  INFO 6572 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-17T10:30:20.088+08:00  INFO 6572 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-17T10:30:27.221+08:00  INFO 11624 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 11624 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
-2026-10-17T10:30:27.226+08:00 DEBUG 11624 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
-2026-10-17T10:30:27.227+08:00  INFO 11624 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-10-17T10:30:28.873+08:00  INFO 11624 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-10-17T10:30:28.895+08:00  INFO 11624 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-17T10:30:28.895+08:00  INFO 11624 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
-2026-10-17T10:30:28.958+08:00  INFO 11624 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1666 ms
-2026-10-17T10:30:30.034+08:00  INFO 11624 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-10-17T10:30:30.043+08:00  INFO 11624 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 3.63 seconds (process running for 4.626)
-2026-10-17T10:30:34.489+08:00  INFO 11624 --- [Tlias] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-17T10:30:34.489+08:00  INFO 11624 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-17T10:30:34.493+08:00  INFO 11624 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-10-17T10:30:34.586+08:00  INFO 11624 --- [Tlias] [http-nio-8080-exec-2] c.imlyb.tlias.controller.EmpController   : 获取员工列表
-2026-10-17T10:30:34.705+08:00  INFO 11624 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-17T10:30:34.987+08:00  INFO 11624 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c3a1694
-2026-10-17T10:30:34.990+08:00  INFO 11624 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-17T10:30:35.003+08:00 DEBUG 11624 --- [Tlias] [http-nio-8080-exec-2] c.i.t.mapper.EmpMapper.findAll_COUNT     : ==>  Preparing: SELECT count(0) FROM tlias.emp e LEFT JOIN dept d ON e.dept_id = d.id
-2026-10-17T10:30:35.036+08:00 DEBUG 11624 --- [Tlias] [http-nio-8080-exec-2] c.i.t.mapper.EmpMapper.findAll_COUNT     : ==> Parameters: 
-2026-10-17T10:30:35.064+08:00 DEBUG 11624 --- [Tlias] [http-nio-8080-exec-2] c.i.t.mapper.EmpMapper.findAll_COUNT     : <==      Total: 1
-2026-10-17T10:30:35.070+08:00 DEBUG 11624 --- [Tlias] [http-nio-8080-exec-2] c.imlyb.tlias.mapper.EmpMapper.findAll   : ==>  Preparing: select e.*,d.name deptName from tlias.emp e left join dept d on e.dept_id = d.id order by e.update_time desc LIMIT ?, ?
-2026-10-17T10:30:35.072+08:00 DEBUG 11624 --- [Tlias] [http-nio-8080-exec-2] c.imlyb.tlias.mapper.EmpMapper.findAll   : ==> Parameters: 5(Long), 5(Integer)
-2026-10-17T10:30:35.086+08:00 DEBUG 11624 --- [Tlias] [http-nio-8080-exec-2] c.imlyb.tlias.mapper.EmpMapper.findAll   : <==      Total: 5
-2026-10-17T10:33:26.625+08:00  INFO 11624 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-17T10:33:26.681+08:00  INFO 11624 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-17T10:33:26.685+08:00  INFO 11624 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-17T10:33:26.695+08:00  INFO 11624 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-17T10:33:32.952+08:00  INFO 4060 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 4060 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
-2026-10-17T10:33:32.956+08:00 DEBUG 4060 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
-2026-10-17T10:33:32.957+08:00  INFO 4060 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-10-17T10:33:34.634+08:00  INFO 4060 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-10-17T10:33:34.656+08:00  INFO 4060 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-17T10:33:34.657+08:00  INFO 4060 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
-2026-10-17T10:33:34.731+08:00  INFO 4060 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1703 ms
-2026-10-17T10:33:35.576+08:00  INFO 4060 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-10-17T10:33:35.585+08:00  INFO 4060 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 3.409 seconds (process running for 4.309)
-2026-10-17T10:33:39.807+08:00  INFO 4060 --- [Tlias] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-17T10:33:39.811+08:00  INFO 4060 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-17T10:33:39.817+08:00  INFO 4060 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2026-10-17T10:33:39.881+08:00  INFO 4060 --- [Tlias] [http-nio-8080-exec-1] c.imlyb.tlias.controller.EmpController   : 获取员工列表
-2026-10-17T10:33:39.980+08:00  INFO 4060 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-17T10:33:40.238+08:00  INFO 4060 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70e4c229
-2026-10-17T10:33:40.240+08:00  INFO 4060 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-17T10:33:40.252+08:00 DEBUG 4060 --- [Tlias] [http-nio-8080-exec-1] c.i.t.mapper.EmpMapper.findAll_COUNT     : ==>  Preparing: SELECT count(0) FROM tlias.emp e LEFT JOIN dept d ON e.dept_id = d.id
-2026-10-17T10:33:40.284+08:00 DEBUG 4060 --- [Tlias] [http-nio-8080-exec-1] c.i.t.mapper.EmpMapper.findAll_COUNT     : ==> Parameters: 
-2026-10-17T10:33:40.312+08:00 DEBUG 4060 --- [Tlias] [http-nio-8080-exec-1] c.i.t.mapper.EmpMapper.findAll_COUNT     : <==      Total: 1
-2026-10-17T10:33:40.317+08:00 DEBUG 4060 --- [Tlias] [http-nio-8080-exec-1] c.imlyb.tlias.mapper.EmpMapper.findAll   : ==>  Preparing: select e.*,d.name deptName from tlias.emp e left join dept d on e.dept_id = d.id order by e.update_time desc LIMIT ?, ?
-2026-10-17T10:33:40.318+08:00 DEBUG 4060 --- [Tlias] [http-nio-8080-exec-1] c.imlyb.tlias.mapper.EmpMapper.findAll   : ==> Parameters: 5(Long), 5(Integer)
-2026-10-17T10:33:40.327+08:00 DEBUG 4060 --- [Tlias] [http-nio-8080-exec-1] c.imlyb.tlias.mapper.EmpMapper.findAll   : <==      Total: 5
-2026-10-17T10:33:53.341+08:00  INFO 4060 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-17T10:33:53.396+08:00  INFO 4060 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-17T10:33:53.400+08:00  INFO 4060 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-17T10:33:53.408+08:00  INFO 4060 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-17T18:35:06.759+08:00  INFO 2704 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 2704 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
-2026-10-17T18:35:06.764+08:00 DEBUG 2704 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
-2026-10-17T18:35:06.765+08:00  INFO 2704 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-10-17T18:35:09.622+08:00  INFO 2704 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-10-17T18:35:09.654+08:00  INFO 2704 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-17T18:35:09.655+08:00  INFO 2704 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
-2026-10-17T18:35:09.739+08:00  INFO 2704 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2900 ms
-2026-10-17T18:35:10.331+08:00  WARN 2704 --- [Tlias] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'empController' defined in file [D:\Projects\Tlias\target\classes\com\imlyb\tlias\controller\EmpController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'empServiceImpl': Unsatisfied dependency expressed through method 'page' parameter 0: No qualifying bean of type 'com.imlyb.tlias.pojo.EmpQueryParam' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2026-10-17T18:35:10.336+08:00  INFO 2704 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-10-17T18:35:10.381+08:00  INFO 2704 --- [Tlias] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2026-10-22T00:20:46.054+08:00  INFO 7188 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-22T00:20:46.110+08:00  INFO 7188 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-22T00:20:46.115+08:00  INFO 7188 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-22T00:20:46.132+08:00  INFO 7188 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-22T00:21:44.682+08:00  INFO 11560 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 11560 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
+2026-10-22T00:21:44.687+08:00 DEBUG 11560 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
+2026-10-22T00:21:44.688+08:00  INFO 11560 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-10-22T00:21:46.293+08:00  INFO 11560 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-22T00:21:46.320+08:00  INFO 11560 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-22T00:21:46.321+08:00  INFO 11560 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-22T00:21:46.395+08:00  INFO 11560 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1625 ms
+2026-10-22T00:21:47.607+08:00  INFO 11560 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-22T00:21:47.614+08:00  INFO 11560 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 3.703 seconds (process running for 4.998)
+2026-10-22T00:21:57.833+08:00  INFO 11560 --- [Tlias] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-22T00:21:57.834+08:00  INFO 11560 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-22T00:21:57.841+08:00  INFO 11560 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2026-10-22T00:21:57.983+08:00  INFO 11560 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-22T00:21:58.257+08:00  INFO 11560 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b86f5fa
+2026-10-22T00:21:58.260+08:00  INFO 11560 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-22T00:21:58.271+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-2] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.*,ee.* from tlias.emp e left join tlias.emp_expr ee on e.id = ee.emp_id where e.id = ?;
+2026-10-22T00:21:58.301+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-2] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
+2026-10-22T00:21:58.337+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-2] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
+2026-10-22T00:22:13.683+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-3] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.*,ee.* from tlias.emp e left join tlias.emp_expr ee on e.id = ee.emp_id where e.id = ?;
+2026-10-22T00:22:13.685+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-3] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
+2026-10-22T00:22:13.689+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-3] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
+2026-10-22T00:22:17.961+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.*,ee.* from tlias.emp e left join tlias.emp_expr ee on e.id = ee.emp_id where e.id = ?;
+2026-10-22T00:22:17.961+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
+2026-10-22T00:22:17.962+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
+2026-10-22T00:22:22.271+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-5] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.*,ee.* from tlias.emp e left join tlias.emp_expr ee on e.id = ee.emp_id where e.id = ?;
+2026-10-22T00:22:22.272+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-5] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
+2026-10-22T00:22:22.273+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-5] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
+2026-10-22T00:22:53.989+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.*,ee.* from tlias.emp e left join tlias.emp_expr ee on e.id = ee.emp_id where e.id = ?;
+2026-10-22T00:22:53.990+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
+2026-10-22T00:22:53.993+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
+2026-10-22T00:23:02.604+08:00  INFO 11560 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-22T00:23:02.660+08:00  INFO 11560 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-22T00:23:02.665+08:00  INFO 11560 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-22T00:23:02.673+08:00  INFO 11560 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-22T00:25:54.389+08:00  INFO 8556 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 8556 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
+2026-10-22T00:25:54.394+08:00 DEBUG 8556 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
+2026-10-22T00:25:54.395+08:00  INFO 8556 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-10-22T00:25:55.955+08:00  INFO 8556 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-22T00:25:55.977+08:00  INFO 8556 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-22T00:25:55.977+08:00  INFO 8556 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-22T00:25:56.048+08:00  INFO 8556 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1583 ms
+2026-10-22T00:25:56.990+08:00  INFO 8556 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-22T00:25:56.998+08:00  INFO 8556 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 3.476 seconds (process running for 4.407)
+2026-10-22T00:26:01.659+08:00  INFO 8556 --- [Tlias] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-22T00:26:01.660+08:00  INFO 8556 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-22T00:26:01.666+08:00  INFO 8556 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-10-22T00:26:01.755+08:00  INFO 8556 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-22T00:26:01.989+08:00  INFO 8556 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ccf51e1
+2026-10-22T00:26:01.991+08:00  INFO 8556 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-22T00:26:02.001+08:00 DEBUG 8556 --- [Tlias] [http-nio-8080-exec-2] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.*,ee.* from tlias.emp e left join tlias.emp_expr ee on e.id = ee.emp_id where e.id = ?;
+2026-10-22T00:26:02.032+08:00 DEBUG 8556 --- [Tlias] [http-nio-8080-exec-2] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
+2026-10-22T00:26:02.057+08:00 DEBUG 8556 --- [Tlias] [http-nio-8080-exec-2] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
+2026-10-22T09:10:43.867+08:00  WARN 8556 --- [Tlias] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h24m11s521ms292µs700ns).
+2026-10-22T09:12:30.920+08:00 DEBUG 8556 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.*,ee.* from tlias.emp e left join tlias.emp_expr ee on e.id = ee.emp_id where e.id = ?;
+2026-10-22T09:12:30.922+08:00 DEBUG 8556 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
+2026-10-22T09:12:30.924+08:00 DEBUG 8556 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
+2026-10-22T09:24:10.816+08:00  INFO 8556 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-22T09:24:10.874+08:00  INFO 8556 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-22T09:24:10.879+08:00  INFO 8556 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-22T09:24:10.882+08:00  INFO 8556 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-22T09:24:18.261+08:00  INFO 14448 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 14448 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
+2026-10-22T09:24:18.266+08:00 DEBUG 14448 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
+2026-10-22T09:24:18.267+08:00  INFO 14448 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-10-22T09:24:20.201+08:00  INFO 14448 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-22T09:24:20.227+08:00  INFO 14448 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-22T09:24:20.228+08:00  INFO 14448 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-22T09:24:20.304+08:00  INFO 14448 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1975 ms
+2026-10-22T09:24:21.787+08:00  INFO 14448 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-22T09:24:21.798+08:00  INFO 14448 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 4.307 seconds (process running for 5.688)
+2026-10-22T09:24:51.088+08:00  INFO 14448 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-22T09:24:51.143+08:00  INFO 14448 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-22T09:24:55.624+08:00  INFO 11780 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 11780 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
+2026-10-22T09:24:55.628+08:00 DEBUG 11780 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
+2026-10-22T09:24:55.629+08:00  INFO 11780 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-10-22T09:24:57.113+08:00  INFO 11780 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-22T09:24:57.135+08:00  INFO 11780 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-22T09:24:57.135+08:00  INFO 11780 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-22T09:24:57.205+08:00  INFO 11780 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1511 ms
+2026-10-22T09:24:58.161+08:00  INFO 11780 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-22T09:24:58.169+08:00  INFO 11780 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 3.367 seconds (process running for 4.277)
+2026-10-22T09:25:10.841+08:00  INFO 11780 --- [Tlias] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-22T09:25:10.842+08:00  INFO 11780 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-22T09:25:10.843+08:00  INFO 11780 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-22T09:25:10.909+08:00  INFO 11780 --- [Tlias] [http-nio-8080-exec-1] c.imlyb.tlias.controller.EmpController   : 获取员工信息:1
+2026-10-22T09:25:10.943+08:00  INFO 11780 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-22T09:25:11.204+08:00  INFO 11780 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42848c77
+2026-10-22T09:25:11.206+08:00  INFO 11780 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-22T09:25:11.216+08:00 DEBUG 11780 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select * from emp where id = ?
+2026-10-22T09:25:11.246+08:00 DEBUG 11780 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
+2026-10-22T09:25:11.275+08:00 DEBUG 11780 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
+2026-10-22T09:25:11.284+08:00 DEBUG 11780 --- [Tlias] [http-nio-8080-exec-1] c.i.t.m.EmpExprMapper.getEmpExprByEmpId  : ==>  Preparing: select * from emp_expr where emp_id = ?
+2026-10-22T09:25:11.284+08:00 DEBUG 11780 --- [Tlias] [http-nio-8080-exec-1] c.i.t.m.EmpExprMapper.getEmpExprByEmpId  : ==> Parameters: 1(Integer)
+2026-10-22T09:25:11.285+08:00 DEBUG 11780 --- [Tlias] [http-nio-8080-exec-1] c.i.t.m.EmpExprMapper.getEmpExprByEmpId  : <==      Total: 0
+2026-10-22T09:25:11.290+08:00 ERROR 11780 --- [Tlias] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.imlyb.tlias.pojo.Emp.setExprList(java.util.List)" because "emp" is null] with root cause
 
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-10-17T18:35:10.407+08:00 ERROR 2704 --- [Tlias] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+java.lang.NullPointerException: Cannot invoke "com.imlyb.tlias.pojo.Emp.setExprList(java.util.List)" because "emp" is null
+	at com.imlyb.tlias.service.impl.EmpServiceImpl.getEmpById(EmpServiceImpl.java:86) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:715) ~[spring-aop-7.0.9.jar:7.0.9]
+	at com.imlyb.tlias.service.impl.EmpServiceImpl$$SpringCGLIB$$0.getEmpById(<generated>) ~[classes/:na]
+	at com.imlyb.tlias.controller.EmpController.getEmpById(EmpController.java:33) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:715) ~[spring-aop-7.0.9.jar:7.0.9]
+	at com.imlyb.tlias.controller.EmpController$$SpringCGLIB$$0.getEmpById(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.25.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.25.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2201) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
 
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of method page in com.imlyb.tlias.service.impl.EmpServiceImpl required a bean of type 'com.imlyb.tlias.pojo.EmpQueryParam' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.imlyb.tlias.pojo.EmpQueryParam' in your configuration.
-
-2026-10-17T18:36:01.309+08:00  INFO 12848 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 12848 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
-2026-10-17T18:36:01.314+08:00 DEBUG 12848 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
-2026-10-17T18:36:01.315+08:00  INFO 12848 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-10-17T18:36:02.824+08:00  INFO 12848 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-10-17T18:36:02.850+08:00  INFO 12848 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-17T18:36:02.850+08:00  INFO 12848 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
-2026-10-17T18:36:02.923+08:00  INFO 12848 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1541 ms
-2026-10-17T18:36:03.388+08:00  WARN 12848 --- [Tlias] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'empController' defined in file [D:\Projects\Tlias\target\classes\com\imlyb\tlias\controller\EmpController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'empServiceImpl': Unsatisfied dependency expressed through method 'page' parameter 0: No qualifying bean of type 'com.imlyb.tlias.pojo.EmpQueryParam' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2026-10-17T18:36:03.393+08:00  INFO 12848 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-10-17T18:36:03.429+08:00  INFO 12848 --- [Tlias] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-10-17T18:36:03.459+08:00 ERROR 12848 --- [Tlias] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of method page in com.imlyb.tlias.service.impl.EmpServiceImpl required a bean of type 'com.imlyb.tlias.pojo.EmpQueryParam' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.imlyb.tlias.pojo.EmpQueryParam' in your configuration.
-
+2026-10-22T09:27:27.126+08:00  INFO 11780 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-22T09:27:27.179+08:00  INFO 11780 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-22T09:27:27.183+08:00  INFO 11780 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-22T09:27:27.191+08:00  INFO 11780 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-22T09:27:34.141+08:00  INFO 13048 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 13048 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
+2026-10-22T09:27:34.147+08:00 DEBUG 13048 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
+2026-10-22T09:27:34.148+08:00  INFO 13048 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-10-22T09:27:35.839+08:00  INFO 13048 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-22T09:27:35.866+08:00  INFO 13048 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-22T09:27:35.867+08:00  INFO 13048 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-22T09:27:35.932+08:00  INFO 13048 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1705 ms
+2026-10-22T09:27:36.997+08:00  INFO 13048 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-22T09:27:37.006+08:00  INFO 13048 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 3.676 seconds (process running for 4.778)
+2026-10-22T09:27:44.950+08:00  INFO 13048 --- [Tlias] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-22T09:27:44.951+08:00  INFO 13048 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-22T09:27:44.953+08:00  INFO 13048 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-22T09:27:45.019+08:00  INFO 13048 --- [Tlias] [http-nio-8080-exec-1] c.imlyb.tlias.controller.EmpController   : 获取员工信息:1
+2026-10-22T09:27:45.055+08:00  INFO 13048 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-22T09:27:45.296+08:00  INFO 13048 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f99993a
+2026-10-22T09:27:45.298+08:00  INFO 13048 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-22T09:27:45.308+08:00 DEBUG 13048 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select * from emp where id = ?
+2026-10-22T09:27:45.342+08:00 DEBUG 13048 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
+2026-10-22T09:27:45.369+08:00 DEBUG 13048 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
+2026-10-22T09:29:21.471+08:00  INFO 13048 --- [Tlias] [http-nio-8080-exec-4] c.imlyb.tlias.controller.EmpController   : 获取员工信息:1
+2026-10-22T09:29:21.472+08:00 DEBUG 13048 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select * from emp where id = ?
+2026-10-22T09:29:21.473+08:00 DEBUG 13048 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
+2026-10-22T09:29:21.476+08:00 DEBUG 13048 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
+2026-10-22T09:30:10.408+08:00  INFO 13048 --- [Tlias] [http-nio-8080-exec-6] c.imlyb.tlias.controller.EmpController   : 获取员工信息:1
+2026-10-22T09:30:10.410+08:00 DEBUG 13048 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select * from emp where id = ?
+2026-10-22T09:30:10.411+08:00 DEBUG 13048 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
+2026-10-22T09:30:10.412+08:00 DEBUG 13048 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
+2026-10-22T09:36:53.839+08:00  INFO 13048 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-22T09:36:53.892+08:00  INFO 13048 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-22T09:36:53.896+08:00  INFO 13048 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-22T09:36:53.903+08:00  INFO 13048 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-22T09:38:21.584+08:00  INFO 12392 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 12392 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
+2026-10-22T09:38:21.589+08:00 DEBUG 12392 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
+2026-10-22T09:38:21.591+08:00  INFO 12392 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-10-22T09:38:23.229+08:00  INFO 12392 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-22T09:38:23.255+08:00  INFO 12392 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-22T09:38:23.255+08:00  INFO 12392 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-22T09:38:23.326+08:00  INFO 12392 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1668 ms
+2026-10-22T09:38:24.363+08:00  INFO 12392 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-22T09:38:24.372+08:00  INFO 12392 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 3.566 seconds (process running for 4.548)
+2026-10-22T09:38:32.252+08:00  INFO 12392 --- [Tlias] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-22T09:38:32.253+08:00  INFO 12392 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-22T09:38:32.254+08:00  INFO 12392 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-22T09:38:32.372+08:00  INFO 12392 --- [Tlias] [http-nio-8080-exec-1] c.imlyb.tlias.controller.EmpController   : 获取员工信息:1
+2026-10-22T09:38:32.414+08:00  INFO 12392 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-22T09:38:32.633+08:00  INFO 12392 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d308cb5
+2026-10-22T09:38:32.636+08:00  INFO 12392 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-22T09:38:32.651+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select * from emp where id = ?
+2026-10-22T09:38:32.699+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
+2026-10-22T09:38:32.740+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
+2026-10-22T09:39:49.169+08:00  INFO 12392 --- [Tlias] [http-nio-8080-exec-4] c.imlyb.tlias.controller.EmpController   : 获取员工信息:1
+2026-10-22T09:39:49.170+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select * from emp where id = ?
+2026-10-22T09:39:49.171+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
+2026-10-22T09:39:49.173+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
+2026-10-22T09:40:17.848+08:00  INFO 12392 --- [Tlias] [http-nio-8080-exec-6] c.imlyb.tlias.controller.EmpController   : 获取员工信息:5
+2026-10-22T09:40:17.849+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select * from emp where id = ?
+2026-10-22T09:40:17.850+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 5(Integer)
+2026-10-22T09:40:17.865+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 1
+2026-10-22T09:40:17.867+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-6] c.i.t.m.EmpExprMapper.getEmpExprByEmpId  : ==>  Preparing: select * from emp_expr where emp_id = ?
+2026-10-22T09:40:17.867+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-6] c.i.t.m.EmpExprMapper.getEmpExprByEmpId  : ==> Parameters: 5(Integer)
+2026-10-22T09:40:17.868+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-6] c.i.t.m.EmpExprMapper.getEmpExprByEmpId  : <==      Total: 0
+2026-10-22T09:40:47.937+08:00  INFO 12392 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-22T09:40:47.992+08:00  INFO 12392 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-22T09:40:47.996+08:00  INFO 12392 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-22T09:40:48.004+08:00  INFO 12392 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-22T11:02:24.873+08:00  INFO 13732 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 13732 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
+2026-10-22T11:02:24.877+08:00 DEBUG 13732 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
+2026-10-22T11:02:24.879+08:00  INFO 13732 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-10-22T11:02:26.361+08:00  INFO 13732 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-22T11:02:26.385+08:00  INFO 13732 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-22T11:02:26.386+08:00  INFO 13732 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-22T11:02:26.458+08:00  INFO 13732 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1508 ms
+2026-10-22T11:02:27.686+08:00  INFO 13732 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-22T11:02:27.695+08:00  INFO 13732 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 3.536 seconds (process running for 4.74)
+2026-10-22T11:02:50.371+08:00  INFO 13732 --- [Tlias] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-22T11:02:50.372+08:00  INFO 13732 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-22T11:02:50.374+08:00  INFO 13732 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-22T11:02:50.438+08:00  INFO 13732 --- [Tlias] [http-nio-8080-exec-1] c.imlyb.tlias.controller.EmpController   : 获取员工信息:5
+2026-10-22T11:02:50.473+08:00  INFO 13732 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-22T11:02:50.705+08:00  INFO 13732 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@68e2644
+2026-10-22T11:02:50.707+08:00  INFO 13732 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-22T11:02:50.719+08:00 DEBUG 13732 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.* , ee.id ee_id , ee.emp_id ee_emp_id , ee.begin ee_begin , ee.end ee_end , ee.company ee_company , ee.job ee_job from emp e left join emp_expr ee on e.id = ee.emp_id where e.id = ?
+2026-10-22T11:02:50.752+08:00 DEBUG 13732 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 5(Integer)
+2026-10-22T11:02:50.783+08:00 DEBUG 13732 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 1
+2026-10-22T14:07:28.663+08:00  WARN 13732 --- [Tlias] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=26m35s391ms415µs).
+2026-10-22T14:18:08.140+08:00  INFO 13732 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-22T14:18:08.198+08:00  INFO 13732 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-22T14:18:08.204+08:00  INFO 13732 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-22T14:18:08.211+08:00  INFO 13732 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-22T14:18:13.904+08:00  INFO 6732 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 6732 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
+2026-10-22T14:18:13.910+08:00 DEBUG 6732 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
+2026-10-22T14:18:13.913+08:00  INFO 6732 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-10-22T14:18:15.586+08:00  INFO 6732 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-22T14:18:15.615+08:00  INFO 6732 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-22T14:18:15.616+08:00  INFO 6732 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-22T14:18:15.693+08:00  INFO 6732 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1688 ms
+2026-10-22T14:18:16.990+08:00  INFO 6732 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-22T14:18:16.998+08:00  INFO 6732 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 3.947 seconds (process running for 4.987)
+2026-10-22T14:56:47.955+08:00  INFO 6732 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-22T14:56:48.009+08:00  INFO 6732 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-22T17:10:44.963+08:00  INFO 12616 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 12616 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
+2026-10-22T17:10:44.968+08:00 DEBUG 12616 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
+2026-10-22T17:10:44.969+08:00  INFO 12616 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-10-22T17:10:46.866+08:00  INFO 12616 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-22T17:10:46.894+08:00  INFO 12616 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-22T17:10:46.894+08:00  INFO 12616 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-22T17:10:46.964+08:00  INFO 12616 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1920 ms
+2026-10-22T17:10:48.184+08:00  INFO 12616 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-22T17:10:48.201+08:00  INFO 12616 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 4.287 seconds (process running for 5.426)
+2026-10-22T17:11:02.143+08:00  INFO 12616 --- [Tlias] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-22T17:11:02.145+08:00  INFO 12616 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-22T17:11:02.149+08:00  INFO 12616 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-10-22T17:11:02.256+08:00  INFO 12616 --- [Tlias] [http-nio-8080-exec-2] c.imlyb.tlias.controller.EmpController   : 获取员工信息:5
+2026-10-22T17:11:02.286+08:00  INFO 12616 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-22T17:11:02.715+08:00  INFO 12616 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d94e729
+2026-10-22T17:11:02.718+08:00  INFO 12616 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-22T17:11:02.735+08:00 DEBUG 12616 --- [Tlias] [http-nio-8080-exec-2] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.* , ee.id ee_id , ee.emp_id ee_emp_id , ee.begin ee_begin , ee.end ee_end , ee.company ee_company , ee.job ee_job from emp e left join emp_expr ee on e.id = ee.emp_id where e.id = ?
+2026-10-22T17:11:02.798+08:00 DEBUG 12616 --- [Tlias] [http-nio-8080-exec-2] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 5(Integer)
+2026-10-22T17:11:02.905+08:00 DEBUG 12616 --- [Tlias] [http-nio-8080-exec-2] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 1
+2026-10-22T17:56:49.651+08:00  WARN 12616 --- [Tlias] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=22m46s488ms13µs800ns).
