@@ -10,11 +10,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 
 @Service
-public class EmoLogServiceImpl implements EmpLogService {
+public class EmpLogServiceImpl implements EmpLogService {
 
     private final EmpLogMapper empLogMapper;
     @Autowired
-    public EmoLogServiceImpl(EmpLogMapper empLogMapper) {
+    public EmpLogServiceImpl(EmpLogMapper empLogMapper) {
         this.empLogMapper = empLogMapper;
     }
 
@@ -23,5 +23,6 @@ public class EmoLogServiceImpl implements EmpLogService {
     public void insertLog(EmpLog empLog) {
         empLogMapper.insert(empLog);
     }
+
 
 }

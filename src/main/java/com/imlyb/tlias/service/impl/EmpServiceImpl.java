@@ -91,4 +91,12 @@ public class EmpServiceImpl implements EmpService {
         return empMapper.getEmpById(id);
     }
 
+    @Transactional
+    @Override
+    public void updateById(Emp emp) {
+        List<Integer> id = List.of(new Integer[]{emp.getId()});
+        empMapper.deleteByIds(id);
+        empMapper.createEmp(emp);
+    }
+
 }

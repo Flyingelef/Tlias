@@ -4,4 +4,5 @@ import com.imlyb.tlias.pojo.EmpLog;
 
 public interface EmpLogService {
     void insertLog(EmpLog empLog);
+
 }
