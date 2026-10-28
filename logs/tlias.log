@@ -1,49 +1,132 @@
-2026-10-22T00:13:52.268+08:00  INFO 7188 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 7188 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
-2026-10-22T00:13:52.281+08:00 DEBUG 7188 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
-2026-10-22T00:13:52.283+08:00  INFO 7188 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-10-22T00:13:54.564+08:00  INFO 7188 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-10-22T00:13:54.595+08:00  INFO 7188 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-22T00:13:54.597+08:00  INFO 7188 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
-2026-10-22T00:13:54.682+08:00  INFO 7188 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2232 ms
-2026-10-22T00:13:57.999+08:00  INFO 7188 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-10-22T00:13:58.011+08:00  INFO 7188 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 6.831 seconds (process running for 8.354)
-2026-10-22T00:17:07.550+08:00  INFO 7188 --- [Tlias] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-22T00:17:07.551+08:00  INFO 7188 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-22T00:17:07.552+08:00  INFO 7188 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-10-22T00:17:07.650+08:00  INFO 7188 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-22T00:17:07.957+08:00  INFO 7188 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13101666
-2026-10-22T00:17:07.961+08:00  INFO 7188 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-22T00:17:07.978+08:00 DEBUG 7188 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.* from tlias.emp e where e.id = ?;
-2026-10-22T00:17:08.019+08:00 DEBUG 7188 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
-2026-10-22T00:17:08.072+08:00 DEBUG 7188 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
-2026-10-22T00:17:08.080+08:00 DEBUG 7188 --- [Tlias] [http-nio-8080-exec-1] c.i.t.m.EmpExprMapper.getEmpExprByEmpId  : ==>  Preparing: select * from emp_expr where emp_id = ?
-2026-10-22T00:17:08.081+08:00 DEBUG 7188 --- [Tlias] [http-nio-8080-exec-1] c.i.t.m.EmpExprMapper.getEmpExprByEmpId  : ==> Parameters: 1(Integer)
-2026-10-22T00:17:08.083+08:00 DEBUG 7188 --- [Tlias] [http-nio-8080-exec-1] c.i.t.m.EmpExprMapper.getEmpExprByEmpId  : <==      Total: 0
-2026-10-22T00:17:08.089+08:00 ERROR 7188 --- [Tlias] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.imlyb.tlias.pojo.Emp.setExprList(java.util.List)" because "emp" is null] with root cause
+2026-10-28T16:55:17.811+08:00  INFO 14020 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 14020 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
+2026-10-28T16:55:17.820+08:00 DEBUG 14020 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
+2026-10-28T16:55:17.821+08:00  INFO 14020 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-10-28T16:55:20.092+08:00  INFO 14020 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-28T16:55:20.117+08:00  INFO 14020 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-28T16:55:20.118+08:00  INFO 14020 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-28T16:55:20.210+08:00  INFO 14020 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2256 ms
+2026-10-28T16:55:21.344+08:00  INFO 14020 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-28T16:55:21.351+08:00  INFO 14020 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 4.671 seconds (process running for 6.523)
+2026-10-28T16:56:19.770+08:00  INFO 14020 --- [Tlias] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-28T16:56:19.770+08:00  INFO 14020 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-28T16:56:19.772+08:00  INFO 14020 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-28T16:56:19.834+08:00  INFO 14020 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-28T16:56:20.102+08:00  INFO 14020 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2381c183
+2026-10-28T16:56:20.105+08:00  INFO 14020 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-28T16:56:20.116+08:00 DEBUG 14020 --- [Tlias] [http-nio-8080-exec-2] c.i.t.mapper.EmpMapper.getGenderData     : ==>  Preparing: select case emp.gender when 1 then "男" when 2 then "女" else "其他" end , count(*) num from emp group by gender order by num
+2026-10-28T16:56:20.151+08:00 DEBUG 14020 --- [Tlias] [http-nio-8080-exec-2] c.i.t.mapper.EmpMapper.getGenderData     : ==> Parameters: 
+2026-10-28T16:56:20.185+08:00 DEBUG 14020 --- [Tlias] [http-nio-8080-exec-2] c.i.t.mapper.EmpMapper.getGenderData     : <==      Total: 2
+2026-10-28T16:57:06.235+08:00 DEBUG 14020 --- [Tlias] [http-nio-8080-exec-3] c.i.tlias.mapper.EmpMapper.getJobData    : ==>  Preparing: select (case when job=1 then '班主任' when job=2 then '讲师' when job=3 then '学工主管' when job=4 then "教研主管" when job=5 then "咨询师" else '其他' end) pos, count(*) num from emp group by job order by num
+2026-10-28T16:57:06.236+08:00 DEBUG 14020 --- [Tlias] [http-nio-8080-exec-3] c.i.tlias.mapper.EmpMapper.getJobData    : ==> Parameters: 
+2026-10-28T16:57:06.240+08:00 DEBUG 14020 --- [Tlias] [http-nio-8080-exec-3] c.i.tlias.mapper.EmpMapper.getJobData    : <==      Total: 5
+2026-10-28T16:57:27.672+08:00  INFO 14020 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.controller.ClazzController     : 获取班级列表
+2026-10-28T16:57:27.894+08:00 DEBUG 14020 --- [Tlias] [http-nio-8080-exec-4] c.i.t.mapper.ClazzMapper.findAll_COUNT   : ==>  Preparing: SELECT count(0) FROM clazz c LEFT JOIN emp e ON c.master_id = e.id WHERE c.name LIKE concat('%', ?, '%') AND c.begin_date >= ? AND c.end_date <= ?
+2026-10-28T16:57:27.896+08:00 DEBUG 14020 --- [Tlias] [http-nio-8080-exec-4] c.i.t.mapper.ClazzMapper.findAll_COUNT   : ==> Parameters: java就业100期(String), 2020-01-01(LocalDate), 2023-01-01(LocalDate)
+2026-10-28T16:57:27.909+08:00 DEBUG 14020 --- [Tlias] [http-nio-8080-exec-4] c.i.t.mapper.ClazzMapper.findAll_COUNT   : <==      Total: 1
+2026-10-28T16:57:38.337+08:00 ERROR 14020 --- [Tlias] [http-nio-8080-exec-5] c.i.t.exception.GlobalExceptionHandler   : 程序出错啦
 
-java.lang.NullPointerException: Cannot invoke "com.imlyb.tlias.pojo.Emp.setExprList(java.util.List)" because "emp" is null
-	at com.imlyb.tlias.service.impl.EmpServiceImpl.getEmpById(EmpServiceImpl.java:86) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:715) ~[spring-aop-7.0.9.jar:7.0.9]
-	at com.imlyb.tlias.service.impl.EmpServiceImpl$$SpringCGLIB$$0.getEmpById(<generated>) ~[classes/:na]
-	at com.imlyb.tlias.controller.EmpController.getEmpById(EmpController.java:32) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:715) ~[spring-aop-7.0.9.jar:7.0.9]
-	at com.imlyb.tlias.controller.EmpController$$SpringCGLIB$$0.getEmpById(<generated>) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.9.jar:7.0.9]
+org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.imlyb.tlias.pojo.Result com.imlyb.tlias.controller.ClazzController.createClazz(com.imlyb.tlias.pojo.Clazz)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:184) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:156) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.25.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.25.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2201) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2026-10-28T16:57:46.271+08:00 ERROR 14020 --- [Tlias] [http-nio-8080-exec-6] c.i.t.exception.GlobalExceptionHandler   : 程序出错啦
+
+org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.imlyb.tlias.pojo.Result com.imlyb.tlias.controller.ClazzController.updateById(com.imlyb.tlias.pojo.Clazz)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:184) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:156) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:914) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:650) ~[tomcat-embed-core-11.0.25.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.25.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2201) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2026-10-28T16:57:51.711+08:00 ERROR 14020 --- [Tlias] [http-nio-8080-exec-7] c.i.t.exception.GlobalExceptionHandler   : 程序出错啦
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; For input string: "list"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:295) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:134) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174) ~[spring-web-7.0.9.jar:7.0.9]
 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
@@ -83,129 +166,84 @@ java.lang.NullPointerException: Cannot invoke "com.imlyb.tlias.pojo.Emp.setExprL
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
 	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.lang.NumberFormatException: For input string: "list"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
+	at java.base/java.lang.Integer.parseInt(Integer.java:668) ~[na:na]
+	at java.base/java.lang.Integer.valueOf(Integer.java:999) ~[na:na]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:201) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:438) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:411) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:158) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:75) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:51) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:846) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:287) ~[spring-web-7.0.9.jar:7.0.9]
+	... 43 common frames omitted
 
-2026-10-22T00:20:46.054+08:00  INFO 7188 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-22T00:20:46.110+08:00  INFO 7188 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-22T00:20:46.115+08:00  INFO 7188 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-22T00:20:46.132+08:00  INFO 7188 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-22T00:21:44.682+08:00  INFO 11560 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 11560 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
-2026-10-22T00:21:44.687+08:00 DEBUG 11560 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
-2026-10-22T00:21:44.688+08:00  INFO 11560 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-10-22T00:21:46.293+08:00  INFO 11560 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-10-22T00:21:46.320+08:00  INFO 11560 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-22T00:21:46.321+08:00  INFO 11560 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
-2026-10-22T00:21:46.395+08:00  INFO 11560 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1625 ms
-2026-10-22T00:21:47.607+08:00  INFO 11560 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-10-22T00:21:47.614+08:00  INFO 11560 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 3.703 seconds (process running for 4.998)
-2026-10-22T00:21:57.833+08:00  INFO 11560 --- [Tlias] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-22T00:21:57.834+08:00  INFO 11560 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-22T00:21:57.841+08:00  INFO 11560 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2026-10-22T00:21:57.983+08:00  INFO 11560 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-22T00:21:58.257+08:00  INFO 11560 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b86f5fa
-2026-10-22T00:21:58.260+08:00  INFO 11560 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-22T00:21:58.271+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-2] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.*,ee.* from tlias.emp e left join tlias.emp_expr ee on e.id = ee.emp_id where e.id = ?;
-2026-10-22T00:21:58.301+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-2] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
-2026-10-22T00:21:58.337+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-2] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
-2026-10-22T00:22:13.683+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-3] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.*,ee.* from tlias.emp e left join tlias.emp_expr ee on e.id = ee.emp_id where e.id = ?;
-2026-10-22T00:22:13.685+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-3] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
-2026-10-22T00:22:13.689+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-3] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
-2026-10-22T00:22:17.961+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.*,ee.* from tlias.emp e left join tlias.emp_expr ee on e.id = ee.emp_id where e.id = ?;
-2026-10-22T00:22:17.961+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
-2026-10-22T00:22:17.962+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
-2026-10-22T00:22:22.271+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-5] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.*,ee.* from tlias.emp e left join tlias.emp_expr ee on e.id = ee.emp_id where e.id = ?;
-2026-10-22T00:22:22.272+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-5] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
-2026-10-22T00:22:22.273+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-5] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
-2026-10-22T00:22:53.989+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.*,ee.* from tlias.emp e left join tlias.emp_expr ee on e.id = ee.emp_id where e.id = ?;
-2026-10-22T00:22:53.990+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
-2026-10-22T00:22:53.993+08:00 DEBUG 11560 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
-2026-10-22T00:23:02.604+08:00  INFO 11560 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-22T00:23:02.660+08:00  INFO 11560 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-22T00:23:02.665+08:00  INFO 11560 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-22T00:23:02.673+08:00  INFO 11560 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-22T00:25:54.389+08:00  INFO 8556 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 8556 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
-2026-10-22T00:25:54.394+08:00 DEBUG 8556 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
-2026-10-22T00:25:54.395+08:00  INFO 8556 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-10-22T00:25:55.955+08:00  INFO 8556 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-10-22T00:25:55.977+08:00  INFO 8556 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-22T00:25:55.977+08:00  INFO 8556 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
-2026-10-22T00:25:56.048+08:00  INFO 8556 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1583 ms
-2026-10-22T00:25:56.990+08:00  INFO 8556 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-10-22T00:25:56.998+08:00  INFO 8556 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 3.476 seconds (process running for 4.407)
-2026-10-22T00:26:01.659+08:00  INFO 8556 --- [Tlias] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-22T00:26:01.660+08:00  INFO 8556 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-22T00:26:01.666+08:00  INFO 8556 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2026-10-22T00:26:01.755+08:00  INFO 8556 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-22T00:26:01.989+08:00  INFO 8556 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ccf51e1
-2026-10-22T00:26:01.991+08:00  INFO 8556 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-22T00:26:02.001+08:00 DEBUG 8556 --- [Tlias] [http-nio-8080-exec-2] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.*,ee.* from tlias.emp e left join tlias.emp_expr ee on e.id = ee.emp_id where e.id = ?;
-2026-10-22T00:26:02.032+08:00 DEBUG 8556 --- [Tlias] [http-nio-8080-exec-2] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
-2026-10-22T00:26:02.057+08:00 DEBUG 8556 --- [Tlias] [http-nio-8080-exec-2] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
-2026-10-22T09:10:43.867+08:00  WARN 8556 --- [Tlias] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h24m11s521ms292µs700ns).
-2026-10-22T09:12:30.920+08:00 DEBUG 8556 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.*,ee.* from tlias.emp e left join tlias.emp_expr ee on e.id = ee.emp_id where e.id = ?;
-2026-10-22T09:12:30.922+08:00 DEBUG 8556 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
-2026-10-22T09:12:30.924+08:00 DEBUG 8556 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
-2026-10-22T09:24:10.816+08:00  INFO 8556 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-22T09:24:10.874+08:00  INFO 8556 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-22T09:24:10.879+08:00  INFO 8556 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-22T09:24:10.882+08:00  INFO 8556 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-22T09:24:18.261+08:00  INFO 14448 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 14448 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
-2026-10-22T09:24:18.266+08:00 DEBUG 14448 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
-2026-10-22T09:24:18.267+08:00  INFO 14448 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-10-22T09:24:20.201+08:00  INFO 14448 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-10-22T09:24:20.227+08:00  INFO 14448 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-22T09:24:20.228+08:00  INFO 14448 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
-2026-10-22T09:24:20.304+08:00  INFO 14448 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1975 ms
-2026-10-22T09:24:21.787+08:00  INFO 14448 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-10-22T09:24:21.798+08:00  INFO 14448 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 4.307 seconds (process running for 5.688)
-2026-10-22T09:24:51.088+08:00  INFO 14448 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-22T09:24:51.143+08:00  INFO 14448 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-22T09:24:55.624+08:00  INFO 11780 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 11780 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
-2026-10-22T09:24:55.628+08:00 DEBUG 11780 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
-2026-10-22T09:24:55.629+08:00  INFO 11780 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-10-22T09:24:57.113+08:00  INFO 11780 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-10-22T09:24:57.135+08:00  INFO 11780 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-22T09:24:57.135+08:00  INFO 11780 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
-2026-10-22T09:24:57.205+08:00  INFO 11780 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1511 ms
-2026-10-22T09:24:58.161+08:00  INFO 11780 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-10-22T09:24:58.169+08:00  INFO 11780 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 3.367 seconds (process running for 4.277)
-2026-10-22T09:25:10.841+08:00  INFO 11780 --- [Tlias] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-22T09:25:10.842+08:00  INFO 11780 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-22T09:25:10.843+08:00  INFO 11780 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-10-22T09:25:10.909+08:00  INFO 11780 --- [Tlias] [http-nio-8080-exec-1] c.imlyb.tlias.controller.EmpController   : 获取员工信息:1
-2026-10-22T09:25:10.943+08:00  INFO 11780 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-22T09:25:11.204+08:00  INFO 11780 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42848c77
-2026-10-22T09:25:11.206+08:00  INFO 11780 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-22T09:25:11.216+08:00 DEBUG 11780 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select * from emp where id = ?
-2026-10-22T09:25:11.246+08:00 DEBUG 11780 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
-2026-10-22T09:25:11.275+08:00 DEBUG 11780 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
-2026-10-22T09:25:11.284+08:00 DEBUG 11780 --- [Tlias] [http-nio-8080-exec-1] c.i.t.m.EmpExprMapper.getEmpExprByEmpId  : ==>  Preparing: select * from emp_expr where emp_id = ?
-2026-10-22T09:25:11.284+08:00 DEBUG 11780 --- [Tlias] [http-nio-8080-exec-1] c.i.t.m.EmpExprMapper.getEmpExprByEmpId  : ==> Parameters: 1(Integer)
-2026-10-22T09:25:11.285+08:00 DEBUG 11780 --- [Tlias] [http-nio-8080-exec-1] c.i.t.m.EmpExprMapper.getEmpExprByEmpId  : <==      Total: 0
-2026-10-22T09:25:11.290+08:00 ERROR 11780 --- [Tlias] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.imlyb.tlias.pojo.Emp.setExprList(java.util.List)" because "emp" is null] with root cause
+2026-10-28T16:57:57.277+08:00 DEBUG 14020 --- [Tlias] [http-nio-8080-exec-8] c.i.t.mapper.ClazzMapper.getClazzById    : ==>  Preparing: select c.id, c.name, c.room, c.begin_date, c.end_date, c.master_id, c.subject, c.create_time, c.update_time from tlias.clazz c where id = ?
+2026-10-28T16:57:57.282+08:00 DEBUG 14020 --- [Tlias] [http-nio-8080-exec-8] c.i.t.mapper.ClazzMapper.getClazzById    : ==> Parameters: 1(Integer)
+2026-10-28T16:57:57.288+08:00 DEBUG 14020 --- [Tlias] [http-nio-8080-exec-8] c.i.t.mapper.ClazzMapper.getClazzById    : <==      Total: 0
+2026-10-28T16:58:03.660+08:00 DEBUG 14020 --- [Tlias] [http-nio-8080-exec-9] c.i.tlias.mapper.ClazzMapper.deleteById  : ==>  Preparing: delete from tlias.clazz where id = ?
+2026-10-28T16:58:03.665+08:00 DEBUG 14020 --- [Tlias] [http-nio-8080-exec-9] c.i.tlias.mapper.ClazzMapper.deleteById  : ==> Parameters: 1(Integer)
+2026-10-28T16:58:03.676+08:00 DEBUG 14020 --- [Tlias] [http-nio-8080-exec-9] c.i.tlias.mapper.ClazzMapper.deleteById  : <==    Updates: 0
+2026-10-28T16:59:08.101+08:00  INFO 14020 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-28T16:59:08.181+08:00  INFO 14020 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-28T16:59:08.186+08:00  INFO 14020 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-28T16:59:08.203+08:00  INFO 14020 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-28T17:08:16.176+08:00  INFO 784 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 784 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
+2026-10-28T17:08:16.181+08:00 DEBUG 784 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
+2026-10-28T17:08:16.182+08:00  INFO 784 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-10-28T17:08:17.807+08:00  INFO 784 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-28T17:08:17.827+08:00  INFO 784 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-28T17:08:17.828+08:00  INFO 784 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-28T17:08:17.902+08:00  INFO 784 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1651 ms
+2026-10-28T17:08:18.880+08:00  INFO 784 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-28T17:08:18.887+08:00  INFO 784 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 3.554 seconds (process running for 4.718)
+2026-10-28T17:08:30.137+08:00  INFO 784 --- [Tlias] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-28T17:08:30.138+08:00  INFO 784 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-28T17:08:30.142+08:00  INFO 784 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-10-28T17:08:30.211+08:00  INFO 784 --- [Tlias] [http-nio-8080-exec-2] c.i.tlias.controller.ClazzController     : 获取班级列表
+2026-10-28T17:08:30.404+08:00  INFO 784 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-28T17:08:30.694+08:00  INFO 784 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ced86b3
+2026-10-28T17:08:30.697+08:00  INFO 784 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-28T17:08:30.709+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-2] c.i.t.mapper.ClazzMapper.findAll_COUNT   : ==>  Preparing: SELECT count(0) FROM clazz c LEFT JOIN emp e ON c.master_id = e.id WHERE c.name LIKE concat('%', ?, '%') AND c.begin_date >= ? AND c.end_date <= ?
+2026-10-28T17:08:30.740+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-2] c.i.t.mapper.ClazzMapper.findAll_COUNT   : ==> Parameters: java就业100期(String), 2020-01-01(LocalDate), 2023-01-01(LocalDate)
+2026-10-28T17:08:30.773+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-2] c.i.t.mapper.ClazzMapper.findAll_COUNT   : <==      Total: 1
+2026-10-28T17:08:38.955+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-3] c.i.t.mapper.ClazzMapper.createClazz     : ==>  Preparing: insert into tlias.clazz (name, room, begin_date, end_date, master_id, subject, update_time, create_time) values (?, ?, ?, ?, ?, ?, ?, ?)
+2026-10-28T17:08:38.957+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-3] c.i.t.mapper.ClazzMapper.createClazz     : ==> Parameters: 象治涛(String), sunt(String), 2026-01-25(LocalDate), 2026-05-25(LocalDate), 61(Integer), 96(Integer), 2026-10-28T17:08:38.953411900(LocalDateTime), 2026-10-28T17:08:38.953411900(LocalDateTime)
+2026-10-28T17:08:38.968+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-3] c.i.t.mapper.ClazzMapper.createClazz     : <==    Updates: 1
+2026-10-28T17:09:22.090+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-4] c.i.t.mapper.ClazzMapper.createClazz     : ==>  Preparing: insert into tlias.clazz (name, room, begin_date, end_date, master_id, subject, update_time, create_time) values (?, ?, ?, ?, ?, ?, ?, ?)
+2026-10-28T17:09:22.092+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-4] c.i.t.mapper.ClazzMapper.createClazz     : ==> Parameters: 象治涛a(String), sunt1(String), 2026-01-24(LocalDate), 2026-05-25(LocalDate), 63(Integer), 12(Integer), 2026-10-28T17:09:22.089140700(LocalDateTime), 2026-10-28T17:09:22.089140700(LocalDateTime)
+2026-10-28T17:09:22.103+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-4] c.i.t.mapper.ClazzMapper.createClazz     : <==    Updates: 1
+2026-10-28T17:09:28.079+08:00  INFO 784 --- [Tlias] [http-nio-8080-exec-5] c.i.tlias.controller.ClazzController     : 获取班级列表
+2026-10-28T17:09:28.118+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-5] c.i.t.mapper.ClazzMapper.findAll_COUNT   : ==>  Preparing: SELECT count(0) FROM clazz c LEFT JOIN emp e ON c.master_id = e.id WHERE c.name LIKE concat('%', ?, '%') AND c.begin_date >= ? AND c.end_date <= ?
+2026-10-28T17:09:28.120+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-5] c.i.t.mapper.ClazzMapper.findAll_COUNT   : ==> Parameters: java就业100期(String), 2020-01-01(LocalDate), 2023-01-01(LocalDate)
+2026-10-28T17:09:28.129+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-5] c.i.t.mapper.ClazzMapper.findAll_COUNT   : <==      Total: 1
+2026-10-28T17:09:39.698+08:00  INFO 784 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.controller.ClazzController     : 获取班级列表
+2026-10-28T17:09:39.708+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-6] c.i.t.mapper.ClazzMapper.findAll_COUNT   : ==>  Preparing: SELECT count(0) FROM clazz c LEFT JOIN emp e ON c.master_id = e.id
+2026-10-28T17:09:39.709+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-6] c.i.t.mapper.ClazzMapper.findAll_COUNT   : ==> Parameters: 
+2026-10-28T17:09:39.717+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-6] c.i.t.mapper.ClazzMapper.findAll_COUNT   : <==      Total: 1
+2026-10-28T17:09:39.720+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.ClazzMapper.findAll     : ==>  Preparing: select c.id, c.name, c.room, c.begin_date, c.end_date, c.master_id, c.create_time, c.update_time, e.name as master_name, case when curdate() < c.begin_date then '未开始' when curdate() > c.end_date then '已结束' else '进行中' end as status from clazz c left join emp e on c.master_id = e.id order by c.update_time desc LIMIT ?
+2026-10-28T17:09:39.722+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.ClazzMapper.findAll     : ==> Parameters: 10(Integer)
+2026-10-28T17:09:39.732+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.ClazzMapper.findAll     : <==      Total: 2
+2026-10-28T17:10:14.913+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-7] c.i.tlias.mapper.ClazzMapper.deleteById  : ==>  Preparing: delete from tlias.clazz where id = ?
+2026-10-28T17:10:14.913+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-7] c.i.tlias.mapper.ClazzMapper.deleteById  : ==> Parameters: 1(Integer)
+2026-10-28T17:10:14.918+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-7] c.i.tlias.mapper.ClazzMapper.deleteById  : <==    Updates: 1
+2026-10-28T17:10:27.071+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-8] c.i.t.mapper.ClazzMapper.getClazzById    : ==>  Preparing: select c.id, c.name, c.room, c.begin_date, c.end_date, c.master_id, c.subject, c.create_time, c.update_time from tlias.clazz c where id = ?
+2026-10-28T17:10:27.072+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-8] c.i.t.mapper.ClazzMapper.getClazzById    : ==> Parameters: 2(Integer)
+2026-10-28T17:10:27.073+08:00 DEBUG 784 --- [Tlias] [http-nio-8080-exec-8] c.i.t.mapper.ClazzMapper.getClazzById    : <==      Total: 1
+2026-10-28T17:10:49.019+08:00 ERROR 784 --- [Tlias] [http-nio-8080-exec-9] c.i.t.exception.GlobalExceptionHandler   : 程序出错啦
 
-java.lang.NullPointerException: Cannot invoke "com.imlyb.tlias.pojo.Emp.setExprList(java.util.List)" because "emp" is null
-	at com.imlyb.tlias.service.impl.EmpServiceImpl.getEmpById(EmpServiceImpl.java:86) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:715) ~[spring-aop-7.0.9.jar:7.0.9]
-	at com.imlyb.tlias.service.impl.EmpServiceImpl$$SpringCGLIB$$0.getEmpById(<generated>) ~[classes/:na]
-	at com.imlyb.tlias.controller.EmpController.getEmpById(EmpController.java:33) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:715) ~[spring-aop-7.0.9.jar:7.0.9]
-	at com.imlyb.tlias.controller.EmpController$$SpringCGLIB$$0.getEmpById(<generated>) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.9.jar:7.0.9]
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2027-01-06 11:34:01": Failed to deserialize `java.time.LocalDateTime` (with format 'ParseCaseSensitive(false)(Value(Year,4,10,EXCEEDS_PAD)'-'Value(MonthOfYear,2)'-'Value(DayOfMonth,2))'T'(Value(HourOfDay,2)':'Value(MinuteOfHour,2)[':'Value(SecondOfMinute,2)[Fraction(NanoOfSecond,0,9,DecimalPoint)]])'): (java.time.format.DateTimeParseException) Text '2027-01-06 11:34:01' could not be parsed at index 10
+	at org.springframework.http.converter.AbstractJacksonHttpMessageConverter.readJavaType(AbstractJacksonHttpMessageConverter.java:363) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.converter.AbstractJacksonHttpMessageConverter.read(AbstractJacksonHttpMessageConverter.java:319) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:203) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:181) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:156) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174) ~[spring-web-7.0.9.jar:7.0.9]
 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
@@ -213,8 +251,8 @@ java.lang.NullPointerException: Cannot invoke "com.imlyb.tlias.pojo.Emp.setExprL
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.9.jar:7.0.9]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.25.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:914) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:650) ~[tomcat-embed-core-11.0.25.jar:6.1]
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.25.jar:6.1]
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
@@ -245,128 +283,257 @@ java.lang.NullPointerException: Cannot invoke "com.imlyb.tlias.pojo.Emp.setExprL
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
 	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: tools.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDateTime` from String "2027-01-06 11:34:01": Failed to deserialize `java.time.LocalDateTime` (with format 'ParseCaseSensitive(false)(Value(Year,4,10,EXCEEDS_PAD)'-'Value(MonthOfYear,2)'-'Value(DayOfMonth,2))'T'(Value(HourOfDay,2)':'Value(MinuteOfHour,2)[':'Value(SecondOfMinute,2)[Fraction(NanoOfSecond,0,9,DecimalPoint)]])'): (java.time.format.DateTimeParseException) Text '2027-01-06 11:34:01' could not be parsed at index 10
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #190] (through reference chain: com.imlyb.tlias.pojo.Clazz["createTime"])
+	at tools.jackson.databind.exc.InvalidFormatException.from(InvalidFormatException.java:37) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.DeserializationContext.weirdStringException(DeserializationContext.java:2063) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.DeserializationContext.handleWeirdStringValue(DeserializationContext.java:1354) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.ext.javatime.deser.JSR310DeserializerBase._handleDateTimeFormatException(JSR310DeserializerBase.java:179) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.ext.javatime.deser.LocalDateTimeDeserializer._fromString(LocalDateTimeDeserializer.java:228) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.ext.javatime.deser.LocalDateTimeDeserializer.deserialize(LocalDateTimeDeserializer.java:105) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.ext.javatime.deser.LocalDateTimeDeserializer.deserialize(LocalDateTimeDeserializer.java:38) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:569) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.bean.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:879) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.bean.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:730) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.bean.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1509) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.bean.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:605) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.bean.BeanDeserializer.deserialize(BeanDeserializer.java:200) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.DeserializationContextExt.readRootValue(DeserializationContextExt.java:266) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:1888) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.ObjectReader.readValue(ObjectReader.java:1270) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at org.springframework.http.converter.AbstractJacksonHttpMessageConverter.readJavaType(AbstractJacksonHttpMessageConverter.java:352) ~[spring-web-7.0.9.jar:7.0.9]
+	... 46 common frames omitted
+Caused by: java.time.format.DateTimeParseException: Text '2027-01-06 11:34:01' could not be parsed at index 10
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052) ~[na:na]
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954) ~[na:na]
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494) ~[na:na]
+	at tools.jackson.databind.ext.javatime.deser.LocalDateTimeDeserializer._fromString(LocalDateTimeDeserializer.java:226) ~[jackson-databind-3.1.5.jar:3.1.5]
+	... 58 common frames omitted
 
-2026-10-22T09:27:27.126+08:00  INFO 11780 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-22T09:27:27.179+08:00  INFO 11780 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-22T09:27:27.183+08:00  INFO 11780 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-22T09:27:27.191+08:00  INFO 11780 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-22T09:27:34.141+08:00  INFO 13048 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 13048 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
-2026-10-22T09:27:34.147+08:00 DEBUG 13048 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
-2026-10-22T09:27:34.148+08:00  INFO 13048 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-10-22T09:27:35.839+08:00  INFO 13048 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-10-22T09:27:35.866+08:00  INFO 13048 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-22T09:27:35.867+08:00  INFO 13048 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
-2026-10-22T09:27:35.932+08:00  INFO 13048 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1705 ms
-2026-10-22T09:27:36.997+08:00  INFO 13048 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-10-22T09:27:37.006+08:00  INFO 13048 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 3.676 seconds (process running for 4.778)
-2026-10-22T09:27:44.950+08:00  INFO 13048 --- [Tlias] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-22T09:27:44.951+08:00  INFO 13048 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-22T09:27:44.953+08:00  INFO 13048 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-10-22T09:27:45.019+08:00  INFO 13048 --- [Tlias] [http-nio-8080-exec-1] c.imlyb.tlias.controller.EmpController   : 获取员工信息:1
-2026-10-22T09:27:45.055+08:00  INFO 13048 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-22T09:27:45.296+08:00  INFO 13048 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f99993a
-2026-10-22T09:27:45.298+08:00  INFO 13048 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-22T09:27:45.308+08:00 DEBUG 13048 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select * from emp where id = ?
-2026-10-22T09:27:45.342+08:00 DEBUG 13048 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
-2026-10-22T09:27:45.369+08:00 DEBUG 13048 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
-2026-10-22T09:29:21.471+08:00  INFO 13048 --- [Tlias] [http-nio-8080-exec-4] c.imlyb.tlias.controller.EmpController   : 获取员工信息:1
-2026-10-22T09:29:21.472+08:00 DEBUG 13048 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select * from emp where id = ?
-2026-10-22T09:29:21.473+08:00 DEBUG 13048 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
-2026-10-22T09:29:21.476+08:00 DEBUG 13048 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
-2026-10-22T09:30:10.408+08:00  INFO 13048 --- [Tlias] [http-nio-8080-exec-6] c.imlyb.tlias.controller.EmpController   : 获取员工信息:1
-2026-10-22T09:30:10.410+08:00 DEBUG 13048 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select * from emp where id = ?
-2026-10-22T09:30:10.411+08:00 DEBUG 13048 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
-2026-10-22T09:30:10.412+08:00 DEBUG 13048 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
-2026-10-22T09:36:53.839+08:00  INFO 13048 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-22T09:36:53.892+08:00  INFO 13048 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-22T09:36:53.896+08:00  INFO 13048 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-22T09:36:53.903+08:00  INFO 13048 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-22T09:38:21.584+08:00  INFO 12392 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 12392 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
-2026-10-22T09:38:21.589+08:00 DEBUG 12392 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
-2026-10-22T09:38:21.591+08:00  INFO 12392 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-10-22T09:38:23.229+08:00  INFO 12392 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-10-22T09:38:23.255+08:00  INFO 12392 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-22T09:38:23.255+08:00  INFO 12392 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
-2026-10-22T09:38:23.326+08:00  INFO 12392 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1668 ms
-2026-10-22T09:38:24.363+08:00  INFO 12392 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-10-22T09:38:24.372+08:00  INFO 12392 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 3.566 seconds (process running for 4.548)
-2026-10-22T09:38:32.252+08:00  INFO 12392 --- [Tlias] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-22T09:38:32.253+08:00  INFO 12392 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-22T09:38:32.254+08:00  INFO 12392 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-10-22T09:38:32.372+08:00  INFO 12392 --- [Tlias] [http-nio-8080-exec-1] c.imlyb.tlias.controller.EmpController   : 获取员工信息:1
-2026-10-22T09:38:32.414+08:00  INFO 12392 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-22T09:38:32.633+08:00  INFO 12392 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d308cb5
-2026-10-22T09:38:32.636+08:00  INFO 12392 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-22T09:38:32.651+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select * from emp where id = ?
-2026-10-22T09:38:32.699+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
-2026-10-22T09:38:32.740+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
-2026-10-22T09:39:49.169+08:00  INFO 12392 --- [Tlias] [http-nio-8080-exec-4] c.imlyb.tlias.controller.EmpController   : 获取员工信息:1
-2026-10-22T09:39:49.170+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select * from emp where id = ?
-2026-10-22T09:39:49.171+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 1(Integer)
-2026-10-22T09:39:49.173+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-4] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 0
-2026-10-22T09:40:17.848+08:00  INFO 12392 --- [Tlias] [http-nio-8080-exec-6] c.imlyb.tlias.controller.EmpController   : 获取员工信息:5
-2026-10-22T09:40:17.849+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select * from emp where id = ?
-2026-10-22T09:40:17.850+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 5(Integer)
-2026-10-22T09:40:17.865+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-6] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 1
-2026-10-22T09:40:17.867+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-6] c.i.t.m.EmpExprMapper.getEmpExprByEmpId  : ==>  Preparing: select * from emp_expr where emp_id = ?
-2026-10-22T09:40:17.867+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-6] c.i.t.m.EmpExprMapper.getEmpExprByEmpId  : ==> Parameters: 5(Integer)
-2026-10-22T09:40:17.868+08:00 DEBUG 12392 --- [Tlias] [http-nio-8080-exec-6] c.i.t.m.EmpExprMapper.getEmpExprByEmpId  : <==      Total: 0
-2026-10-22T09:40:47.937+08:00  INFO 12392 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-22T09:40:47.992+08:00  INFO 12392 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-22T09:40:47.996+08:00  INFO 12392 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-22T09:40:48.004+08:00  INFO 12392 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-22T11:02:24.873+08:00  INFO 13732 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 13732 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
-2026-10-22T11:02:24.877+08:00 DEBUG 13732 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
-2026-10-22T11:02:24.879+08:00  INFO 13732 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-10-22T11:02:26.361+08:00  INFO 13732 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-10-22T11:02:26.385+08:00  INFO 13732 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-22T11:02:26.386+08:00  INFO 13732 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
-2026-10-22T11:02:26.458+08:00  INFO 13732 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1508 ms
-2026-10-22T11:02:27.686+08:00  INFO 13732 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-10-22T11:02:27.695+08:00  INFO 13732 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 3.536 seconds (process running for 4.74)
-2026-10-22T11:02:50.371+08:00  INFO 13732 --- [Tlias] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-22T11:02:50.372+08:00  INFO 13732 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-22T11:02:50.374+08:00  INFO 13732 --- [Tlias] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-10-22T11:02:50.438+08:00  INFO 13732 --- [Tlias] [http-nio-8080-exec-1] c.imlyb.tlias.controller.EmpController   : 获取员工信息:5
-2026-10-22T11:02:50.473+08:00  INFO 13732 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-22T11:02:50.705+08:00  INFO 13732 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@68e2644
-2026-10-22T11:02:50.707+08:00  INFO 13732 --- [Tlias] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-22T11:02:50.719+08:00 DEBUG 13732 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.* , ee.id ee_id , ee.emp_id ee_emp_id , ee.begin ee_begin , ee.end ee_end , ee.company ee_company , ee.job ee_job from emp e left join emp_expr ee on e.id = ee.emp_id where e.id = ?
-2026-10-22T11:02:50.752+08:00 DEBUG 13732 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 5(Integer)
-2026-10-22T11:02:50.783+08:00 DEBUG 13732 --- [Tlias] [http-nio-8080-exec-1] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 1
-2026-10-22T14:07:28.663+08:00  WARN 13732 --- [Tlias] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=26m35s391ms415µs).
-2026-10-22T14:18:08.140+08:00  INFO 13732 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-22T14:18:08.198+08:00  INFO 13732 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-22T14:18:08.204+08:00  INFO 13732 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-22T14:18:08.211+08:00  INFO 13732 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-22T14:18:13.904+08:00  INFO 6732 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 6732 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
-2026-10-22T14:18:13.910+08:00 DEBUG 6732 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
-2026-10-22T14:18:13.913+08:00  INFO 6732 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-10-22T14:18:15.586+08:00  INFO 6732 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-10-22T14:18:15.615+08:00  INFO 6732 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-22T14:18:15.616+08:00  INFO 6732 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
-2026-10-22T14:18:15.693+08:00  INFO 6732 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1688 ms
-2026-10-22T14:18:16.990+08:00  INFO 6732 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-10-22T14:18:16.998+08:00  INFO 6732 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 3.947 seconds (process running for 4.987)
-2026-10-22T14:56:47.955+08:00  INFO 6732 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-22T14:56:48.009+08:00  INFO 6732 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-22T17:10:44.963+08:00  INFO 12616 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 12616 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
-2026-10-22T17:10:44.968+08:00 DEBUG 12616 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
-2026-10-22T17:10:44.969+08:00  INFO 12616 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-10-22T17:10:46.866+08:00  INFO 12616 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-10-22T17:10:46.894+08:00  INFO 12616 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-22T17:10:46.894+08:00  INFO 12616 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
-2026-10-22T17:10:46.964+08:00  INFO 12616 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1920 ms
-2026-10-22T17:10:48.184+08:00  INFO 12616 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-10-22T17:10:48.201+08:00  INFO 12616 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 4.287 seconds (process running for 5.426)
-2026-10-22T17:11:02.143+08:00  INFO 12616 --- [Tlias] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-22T17:11:02.145+08:00  INFO 12616 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-22T17:11:02.149+08:00  INFO 12616 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2026-10-22T17:11:02.256+08:00  INFO 12616 --- [Tlias] [http-nio-8080-exec-2] c.imlyb.tlias.controller.EmpController   : 获取员工信息:5
-2026-10-22T17:11:02.286+08:00  INFO 12616 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-22T17:11:02.715+08:00  INFO 12616 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d94e729
-2026-10-22T17:11:02.718+08:00  INFO 12616 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-22T17:11:02.735+08:00 DEBUG 12616 --- [Tlias] [http-nio-8080-exec-2] c.i.tlias.mapper.EmpMapper.getEmpById    : ==>  Preparing: select e.* , ee.id ee_id , ee.emp_id ee_emp_id , ee.begin ee_begin , ee.end ee_end , ee.company ee_company , ee.job ee_job from emp e left join emp_expr ee on e.id = ee.emp_id where e.id = ?
-2026-10-22T17:11:02.798+08:00 DEBUG 12616 --- [Tlias] [http-nio-8080-exec-2] c.i.tlias.mapper.EmpMapper.getEmpById    : ==> Parameters: 5(Integer)
-2026-10-22T17:11:02.905+08:00 DEBUG 12616 --- [Tlias] [http-nio-8080-exec-2] c.i.tlias.mapper.EmpMapper.getEmpById    : <==      Total: 1
-2026-10-22T17:56:49.651+08:00  WARN 12616 --- [Tlias] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=22m46s488ms13µs800ns).
+2026-10-28T17:12:15.834+08:00 ERROR 784 --- [Tlias] [http-nio-8080-exec-2] c.i.t.exception.GlobalExceptionHandler   : 程序出错啦
+
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2021-01-06 11:34:01": Failed to deserialize `java.time.LocalDateTime` (with format 'ParseCaseSensitive(false)(Value(Year,4,10,EXCEEDS_PAD)'-'Value(MonthOfYear,2)'-'Value(DayOfMonth,2))'T'(Value(HourOfDay,2)':'Value(MinuteOfHour,2)[':'Value(SecondOfMinute,2)[Fraction(NanoOfSecond,0,9,DecimalPoint)]])'): (java.time.format.DateTimeParseException) Text '2021-01-06 11:34:01' could not be parsed at index 10
+	at org.springframework.http.converter.AbstractJacksonHttpMessageConverter.readJavaType(AbstractJacksonHttpMessageConverter.java:363) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.converter.AbstractJacksonHttpMessageConverter.read(AbstractJacksonHttpMessageConverter.java:319) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:203) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:181) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:156) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:914) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:650) ~[tomcat-embed-core-11.0.25.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.25.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2201) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: tools.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDateTime` from String "2021-01-06 11:34:01": Failed to deserialize `java.time.LocalDateTime` (with format 'ParseCaseSensitive(false)(Value(Year,4,10,EXCEEDS_PAD)'-'Value(MonthOfYear,2)'-'Value(DayOfMonth,2))'T'(Value(HourOfDay,2)':'Value(MinuteOfHour,2)[':'Value(SecondOfMinute,2)[Fraction(NanoOfSecond,0,9,DecimalPoint)]])'): (java.time.format.DateTimeParseException) Text '2021-01-06 11:34:01' could not be parsed at index 10
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #190] (through reference chain: com.imlyb.tlias.pojo.Clazz["createTime"])
+	at tools.jackson.databind.exc.InvalidFormatException.from(InvalidFormatException.java:37) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.DeserializationContext.weirdStringException(DeserializationContext.java:2063) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.DeserializationContext.handleWeirdStringValue(DeserializationContext.java:1354) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.ext.javatime.deser.JSR310DeserializerBase._handleDateTimeFormatException(JSR310DeserializerBase.java:179) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.ext.javatime.deser.LocalDateTimeDeserializer._fromString(LocalDateTimeDeserializer.java:228) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.ext.javatime.deser.LocalDateTimeDeserializer.deserialize(LocalDateTimeDeserializer.java:105) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.ext.javatime.deser.LocalDateTimeDeserializer.deserialize(LocalDateTimeDeserializer.java:38) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:569) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.bean.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:879) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.bean.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:730) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.bean.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1509) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.bean.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:605) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.bean.BeanDeserializer.deserialize(BeanDeserializer.java:200) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.DeserializationContextExt.readRootValue(DeserializationContextExt.java:266) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:1888) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.ObjectReader.readValue(ObjectReader.java:1270) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at org.springframework.http.converter.AbstractJacksonHttpMessageConverter.readJavaType(AbstractJacksonHttpMessageConverter.java:352) ~[spring-web-7.0.9.jar:7.0.9]
+	... 46 common frames omitted
+Caused by: java.time.format.DateTimeParseException: Text '2021-01-06 11:34:01' could not be parsed at index 10
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052) ~[na:na]
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954) ~[na:na]
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494) ~[na:na]
+	at tools.jackson.databind.ext.javatime.deser.LocalDateTimeDeserializer._fromString(LocalDateTimeDeserializer.java:226) ~[jackson-databind-3.1.5.jar:3.1.5]
+	... 58 common frames omitted
+
+2026-10-28T17:15:58.967+08:00  INFO 784 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-28T17:15:59.024+08:00  INFO 784 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-28T17:15:59.028+08:00  INFO 784 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-28T17:15:59.036+08:00  INFO 784 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-28T17:18:09.821+08:00  INFO 14172 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 14172 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
+2026-10-28T17:18:09.828+08:00 DEBUG 14172 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
+2026-10-28T17:18:09.829+08:00  INFO 14172 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-10-28T17:18:11.674+08:00  INFO 14172 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-28T17:18:11.703+08:00  INFO 14172 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-28T17:18:11.704+08:00  INFO 14172 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-28T17:18:11.787+08:00  INFO 14172 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1879 ms
+2026-10-28T17:18:13.184+08:00  INFO 14172 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-28T17:18:13.202+08:00  INFO 14172 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 4.213 seconds (process running for 5.22)
+2026-10-28T17:18:40.405+08:00  INFO 14172 --- [Tlias] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-28T17:18:40.406+08:00  INFO 14172 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-28T17:18:40.408+08:00  INFO 14172 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-28T17:18:40.574+08:00 ERROR 14172 --- [Tlias] [http-nio-8080-exec-2] c.i.t.exception.GlobalExceptionHandler   : 程序出错啦
+
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2021-07-23": Failed to deserialize `java.time.LocalDateTime` (with format 'Value(YearOfEra,4,19,EXCEEDS_PAD)'-'Value(MonthOfYear,2)'-'Value(DayOfMonth,2)' 'Value(HourOfDay,2)':'Value(MinuteOfHour,2)':'Value(SecondOfMinute,2)'): (java.time.format.DateTimeParseException) Text '2021-07-23' could not be parsed at index 10
+	at org.springframework.http.converter.AbstractJacksonHttpMessageConverter.readJavaType(AbstractJacksonHttpMessageConverter.java:363) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.converter.AbstractJacksonHttpMessageConverter.read(AbstractJacksonHttpMessageConverter.java:319) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:203) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:181) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:156) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:914) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:650) ~[tomcat-embed-core-11.0.25.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.25.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2201) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.25.jar:11.0.25]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: tools.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDateTime` from String "2021-07-23": Failed to deserialize `java.time.LocalDateTime` (with format 'Value(YearOfEra,4,19,EXCEEDS_PAD)'-'Value(MonthOfYear,2)'-'Value(DayOfMonth,2)' 'Value(HourOfDay,2)':'Value(MinuteOfHour,2)':'Value(SecondOfMinute,2)'): (java.time.format.DateTimeParseException) Text '2021-07-23' could not be parsed at index 10
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #232] (through reference chain: com.imlyb.tlias.pojo.Clazz["updateTime"])
+	at tools.jackson.databind.exc.InvalidFormatException.from(InvalidFormatException.java:37) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.DeserializationContext.weirdStringException(DeserializationContext.java:2063) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.DeserializationContext.handleWeirdStringValue(DeserializationContext.java:1354) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.ext.javatime.deser.JSR310DeserializerBase._handleDateTimeFormatException(JSR310DeserializerBase.java:179) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.ext.javatime.deser.LocalDateTimeDeserializer._fromString(LocalDateTimeDeserializer.java:228) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.ext.javatime.deser.LocalDateTimeDeserializer.deserialize(LocalDateTimeDeserializer.java:105) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.ext.javatime.deser.LocalDateTimeDeserializer.deserialize(LocalDateTimeDeserializer.java:38) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:569) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.bean.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:879) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.bean.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:730) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.bean.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1509) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.bean.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:605) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.bean.BeanDeserializer.deserialize(BeanDeserializer.java:200) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.deser.DeserializationContextExt.readRootValue(DeserializationContextExt.java:266) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:1888) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at tools.jackson.databind.ObjectReader.readValue(ObjectReader.java:1270) ~[jackson-databind-3.1.5.jar:3.1.5]
+	at org.springframework.http.converter.AbstractJacksonHttpMessageConverter.readJavaType(AbstractJacksonHttpMessageConverter.java:352) ~[spring-web-7.0.9.jar:7.0.9]
+	... 46 common frames omitted
+Caused by: java.time.format.DateTimeParseException: Text '2021-07-23' could not be parsed at index 10
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052) ~[na:na]
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954) ~[na:na]
+	at java.base/java.time.LocalDateTime.parse(LocalDateTime.java:494) ~[na:na]
+	at tools.jackson.databind.ext.javatime.deser.LocalDateTimeDeserializer._fromString(LocalDateTimeDeserializer.java:226) ~[jackson-databind-3.1.5.jar:3.1.5]
+	... 58 common frames omitted
+
+2026-10-28T17:19:22.546+08:00  INFO 14172 --- [Tlias] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-28T17:19:22.857+08:00  INFO 14172 --- [Tlias] [http-nio-8080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5756deb8
+2026-10-28T17:19:22.859+08:00  INFO 14172 --- [Tlias] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-28T17:19:22.873+08:00 DEBUG 14172 --- [Tlias] [http-nio-8080-exec-3] c.i.tlias.mapper.ClazzMapper.updateById  : ==>  Preparing: update tlias.clazz SET name = ?, room = ?, begin_date = ?, end_date = ?, master_id = ?, subject = ?, create_time = ?, update_time = ? where id = ?
+2026-10-28T17:19:22.910+08:00 DEBUG 14172 --- [Tlias] [http-nio-8080-exec-3] c.i.tlias.mapper.ClazzMapper.updateById  : ==> Parameters: 愈秀英(String), quis sint(String), 2026-01-21(LocalDate), 2025-11-06(LocalDate), 98(Integer), 48(Integer), 2021-01-06T11:34:01(LocalDateTime), 2021-07-23T11:34:01(LocalDateTime), 2(Integer)
+2026-10-28T17:19:22.929+08:00 DEBUG 14172 --- [Tlias] [http-nio-8080-exec-3] c.i.tlias.mapper.ClazzMapper.updateById  : <==    Updates: 1
+2026-10-28T17:19:54.197+08:00 DEBUG 14172 --- [Tlias] [http-nio-8080-exec-4] c.i.t.mapper.EmpMapper.getGenderData     : ==>  Preparing: select case emp.gender when 1 then "男" when 2 then "女" else "其他" end , count(*) num from emp group by gender order by num
+2026-10-28T17:19:54.199+08:00 DEBUG 14172 --- [Tlias] [http-nio-8080-exec-4] c.i.t.mapper.EmpMapper.getGenderData     : ==> Parameters: 
+2026-10-28T17:19:54.299+08:00 DEBUG 14172 --- [Tlias] [http-nio-8080-exec-4] c.i.t.mapper.EmpMapper.getGenderData     : <==      Total: 2
+2026-10-28T17:21:30.617+08:00  INFO 14172 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-28T17:21:30.679+08:00  INFO 14172 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-28T17:21:30.685+08:00  INFO 14172 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-28T17:21:30.694+08:00  INFO 14172 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-28T17:21:34.401+08:00  INFO 1460 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 1460 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
+2026-10-28T17:21:34.406+08:00 DEBUG 1460 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
+2026-10-28T17:21:34.408+08:00  INFO 1460 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-10-28T17:21:35.974+08:00  INFO 1460 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-28T17:21:36.001+08:00  INFO 1460 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-28T17:21:36.002+08:00  INFO 1460 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-28T17:21:36.093+08:00  INFO 1460 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1613 ms
+2026-10-28T17:21:37.058+08:00  INFO 1460 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-28T17:21:37.065+08:00  INFO 1460 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 3.485 seconds (process running for 4.497)
+2026-10-28T17:21:43.014+08:00  INFO 1460 --- [Tlias] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-28T17:21:43.016+08:00  INFO 1460 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-28T17:21:43.018+08:00  INFO 1460 --- [Tlias] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-28T17:21:43.102+08:00  INFO 1460 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-28T17:21:43.408+08:00  INFO 1460 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d8cf7fa
+2026-10-28T17:21:43.410+08:00  INFO 1460 --- [Tlias] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-28T17:21:43.423+08:00 DEBUG 1460 --- [Tlias] [http-nio-8080-exec-2] c.i.t.mapper.EmpMapper.getGenderData     : ==>  Preparing: select case gender when 1 then "男" when 2 then "女" else "其他" end , count(*) num from emp group by gender order by num
+2026-10-28T17:21:43.459+08:00 DEBUG 1460 --- [Tlias] [http-nio-8080-exec-2] c.i.t.mapper.EmpMapper.getGenderData     : ==> Parameters: 
+2026-10-28T17:21:43.492+08:00 DEBUG 1460 --- [Tlias] [http-nio-8080-exec-2] c.i.t.mapper.EmpMapper.getGenderData     : <==      Total: 2
+2026-10-28T17:22:37.222+08:00  INFO 1460 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-28T17:22:37.281+08:00  INFO 1460 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-28T17:22:37.284+08:00  INFO 1460 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-28T17:22:37.292+08:00  INFO 1460 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-28T17:22:41.427+08:00  INFO 11576 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Starting TliasApplication using Java 17.0.12 with PID 11576 (D:\Projects\Tlias\target\classes started by Administrator in D:\Projects\Tlias)
+2026-10-28T17:22:41.432+08:00 DEBUG 11576 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Running with Spring Boot v4.0.8, Spring v7.0.9
+2026-10-28T17:22:41.433+08:00  INFO 11576 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-10-28T17:22:42.997+08:00  INFO 11576 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-28T17:22:43.023+08:00  INFO 11576 --- [Tlias] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-28T17:22:43.024+08:00  INFO 11576 --- [Tlias] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-28T17:22:43.094+08:00  INFO 11576 --- [Tlias] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1594 ms
+2026-10-28T17:22:44.004+08:00  INFO 11576 --- [Tlias] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-28T17:22:44.012+08:00  INFO 11576 --- [Tlias] [main] com.imlyb.tlias.TliasApplication         : Started TliasApplication in 3.364 seconds (process running for 4.325)
+2026-10-28T17:22:47.487+08:00  INFO 11576 --- [Tlias] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-28T17:22:47.488+08:00  INFO 11576 --- [Tlias] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-28T17:22:47.491+08:00  INFO 11576 --- [Tlias] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-28T17:22:47.699+08:00  INFO 11576 --- [Tlias] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-28T17:22:48.087+08:00  INFO 11576 --- [Tlias] [http-nio-8080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8dc5fe5
+2026-10-28T17:22:48.089+08:00  INFO 11576 --- [Tlias] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-28T17:22:48.098+08:00 DEBUG 11576 --- [Tlias] [http-nio-8080-exec-3] c.i.t.mapper.EmpMapper.getGenderData     : ==>  Preparing: select (case when gender=1 then "男" when gender=2 then "女" else "其他" end ) gender, count(*) num from emp group by gender order by num
+2026-10-28T17:22:48.132+08:00 DEBUG 11576 --- [Tlias] [http-nio-8080-exec-3] c.i.t.mapper.EmpMapper.getGenderData     : ==> Parameters: 
+2026-10-28T17:22:48.169+08:00 DEBUG 11576 --- [Tlias] [http-nio-8080-exec-3] c.i.t.mapper.EmpMapper.getGenderData     : <==      Total: 2
+2026-10-28T17:23:12.884+08:00  INFO 11576 --- [Tlias] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-28T17:23:12.939+08:00  INFO 11576 --- [Tlias] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-28T17:23:12.943+08:00  INFO 11576 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-28T17:23:12.951+08:00  INFO 11576 --- [Tlias] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

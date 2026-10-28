@@ -1,5 +1,6 @@
 package com.imlyb.tlias.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Emp {
+    //内表
     private Integer id; //ID,主键
     private String username; //用户名
     private String password; //密码
@@ -23,9 +25,12 @@ public class Emp {
     private String image; //头像
     private LocalDate entryDate; //入职日期
     private Integer deptId; //关联的部门ID
-    private String deptName;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime; //创建时间
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime updateTime; //修改时间
 
+    //外表
+    private String deptName;
     private List<EmpExpr> exprList;
 }

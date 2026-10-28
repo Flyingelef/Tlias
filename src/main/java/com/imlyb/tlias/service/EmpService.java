@@ -5,6 +5,7 @@ import com.imlyb.tlias.pojo.EmpQueryParam;
 import com.imlyb.tlias.pojo.PageResult;
 
 import java.util.List;
+import java.util.Map;
 
 public interface EmpService {
 
@@ -17,4 +18,10 @@ public interface EmpService {
     Emp getEmpById(Integer id);
 
     void updateById(Emp emp);
+
+    List<Map<String,Object>> getGenderData();
+
+    List<Map<String,Object>> getJobData();
+
+    List<Map<String,Object>> getStudentDegreeData();
 }

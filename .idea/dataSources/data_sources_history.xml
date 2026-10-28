@@ -22,7 +22,6 @@
           <node kind="schema">
             <name qname="@" />
             <name qname="tlias" />
-            <name qname="db02" />
           </node>
         </introspection-scope>
       </schema-mapping>

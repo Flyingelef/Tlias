@@ -13,7 +13,9 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class EmpServiceImpl implements EmpService {
@@ -91,12 +93,35 @@ public class EmpServiceImpl implements EmpService {
         return empMapper.getEmpById(id);
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public void updateById(Emp emp) {
-        List<Integer> id = List.of(new Integer[]{emp.getId()});
-        empMapper.deleteByIds(id);
-        empMapper.createEmp(emp);
+        //更新员工基本信息
+        emp.setUpdateTime(LocalDateTime.now());
+        empMapper.updateById(emp);
+        //删除员工原有工作经历
+        empExprMapper.deleteByEmpIds(Arrays.asList(emp.getId()));
+        //添加新工作经历
+        List<EmpExpr> exprList = emp.getExprList();
+        if (!CollectionUtils.isEmpty(exprList)) {
+            exprList.forEach(empExpr -> empExpr.setEmpId(emp.getId()));
+            empExprMapper.insertBatch(exprList);
+        }
+    }
+
+    @Override
+    public List<Map<String, Object>> getGenderData() {
+        return empMapper.getGenderData();
+    }
+
+    @Override
+    public List<Map<String, Object>> getJobData() {
+        return empMapper.getJobData();
+    }
+
+    @Override
+    public List<Map<String, Object>> getStudentDegreeData() {
+        return empMapper.getStudentDegreeData();
     }
 
 }

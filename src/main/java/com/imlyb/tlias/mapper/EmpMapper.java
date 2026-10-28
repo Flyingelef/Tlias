@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface EmpMapper {
@@ -20,4 +21,12 @@ public interface EmpMapper {
 
     @Options(useGeneratedKeys = true , keyProperty = "id")
     void createEmp(Emp emp);
+
+    void updateById(Emp emp);
+
+    List<Map<String, Object>> getGenderData();
+
+    List<Map<String,Object>> getJobData();
+
+    List<Map<String, Object>> getStudentDegreeData();
 }
