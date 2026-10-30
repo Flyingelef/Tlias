@@ -9,6 +9,7 @@
         VALUES (#{username}, #{name}, #{gender}, #{phone}, #{job}, #{salary}, #{image}, #{entryDate}, #{deptId},
                 #{createTime}, #{updateTime})
     </insert>
+
     <update id="updateById">
         update tlias.emp
         <set>
@@ -27,7 +28,7 @@
         where id = #{id}
     </update>
 
-    <delete id="deleteByIds">
+    <delete id="deleteEmpByIds">
         delete
         from tlias.emp
         where id in
@@ -114,9 +115,6 @@
     else '其他' end) pos,
         count(*) num
         from emp group by job order by num
-    </select>
-    <select id="getStudentDegreeData" resultType="java.util.Map">
-
     </select>
 
 </mapper>

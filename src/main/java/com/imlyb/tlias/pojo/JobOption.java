@@ -10,6 +10,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class JobOption {
-    private List jobList;
-    private List dataList;
+    private List<Object> jobList;
+    private List<Object> dataList;
 }

@@ -15,6 +15,11 @@ public class GlobalExceptionHandler {
         return Result.error("出错，请联系管理");
     }
 
+    @ExceptionHandler
+    public Result studentsRemainException(ClazzHasStudentsException c){
+        log.warn("删除班级失败{}",c.getMessage());
+        return Result.error(c.getMessage());
+    }
 
 
 }

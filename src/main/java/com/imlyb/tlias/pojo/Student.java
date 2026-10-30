@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,17 +16,18 @@ public class Student {
     private String no;
     private Integer gender;
     private String phone;
-    private Integer degree;
     private String idCard;
-    private Integer isCollage;
+    private Integer isCollege;
     private String address;
+    private Integer degree;
     private String graduationDate;
     private Integer violationCount;
     private Integer violationScore;
     private Integer clazzId;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime createTime;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime updateTime;
+
     private String clazzName;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private String createTime;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private String updateTime;
 }

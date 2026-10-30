@@ -21,24 +21,6 @@ public class EmpController {
         this.empService = empService;
     }
 
-    //学员学历统计
-    @GetMapping("/report/studentDegreeData")
-    public Result getStudentDegreeData(){
-        return Result.success(empService.getStudentDegreeData());
-    }
-
-    //员工职业统计
-    @GetMapping("/report/empJobData")
-    public Result getJobData(){
-        return Result.success(empService.getJobData());
-    }
-
-    //员工性别统计
-    @GetMapping("/report/empGenderData")
-    public Result getGenderData(){
-        return Result.success(empService.getGenderData());
-    }
-
     //分页查询员工信息
     @GetMapping("/emps")
     public Result list(EmpQueryParam e) {
@@ -54,8 +36,8 @@ public class EmpController {
     }
 
     @DeleteMapping("/emps")
-    public Result deleteByIds(@Param("ids") List<Integer> ids) {
-        empService.deleteByIds(ids);
+    public Result deleteEmpByIds(@Param("ids") List<Integer> ids) {
+        empService.deleteEmpByIds(ids);
         return Result.success();
     }
 
@@ -65,12 +47,10 @@ public class EmpController {
         return Result.success();
     }
 
-
     @PostMapping("/emps")
     public Result createEmp(@RequestBody Emp emp) {
         empService.createEmp(emp);
         return Result.success();
     }
-
 
 }

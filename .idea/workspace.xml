@@ -5,47 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71e3ec6f-ab80-4664-a76c-9dba73922214" name="更改" comment="批量删除">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/controller/ClazzController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/controller/StudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/mapper/ClazzMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/mapper/StudentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/pojo/ClazzQueryParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/pojo/JobOption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/pojo/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/pojo/StudentQueryParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/service/ClazzService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/service/StudentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/service/impl/ClazzServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/service/impl/StudentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/imlyb/tlias/mapper/ClazzMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/imlyb/tlias/mapper/StudentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ea43fff-d3f3-42a4-b472-0cf4309f0d09.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3ea43fff-d3f3-42a4-b472-0cf4309f0d09.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/exception/ClazzHasStudentsException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/tlias.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/tlias.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/tlias.log.2026-10-16.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/tlias.log.2026-10-17.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/controller/ClazzController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/controller/ClazzController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/controller/DeptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/controller/DeptController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/controller/EmpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/controller/EmpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/mapper/EmpMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/mapper/EmpMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/pojo/Clazz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/pojo/Clazz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/pojo/Dept.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/pojo/Dept.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/pojo/Emp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/pojo/Emp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/service/EmpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/service/EmpService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/service/impl/EmpServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/service/impl/EmpServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/imlyb/tlias/mapper/EmpExprMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/imlyb/tlias/mapper/EmpExprMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/imlyb/tlias/mapper/EmpMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/imlyb/tlias/mapper/EmpMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/mapper/ClazzMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/mapper/ClazzMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/mapper/StudentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/service/ClazzService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/service/ClazzService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/service/impl/ClazzServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/service/impl/ClazzServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imlyb/tlias/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/imlyb/tlias/mapper/ClazzMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/imlyb/tlias/mapper/ClazzMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/imlyb/tlias/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/imlyb/tlias/mapper/StudentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/controller/ClazzController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/controller/ClazzController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/controller/EmpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/controller/EmpController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/mapper/EmpExprMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/mapper/EmpExprMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/mapper/EmpMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/mapper/EmpMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/mapper/ClazzMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/mapper/ClazzMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/mapper/EmpMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/mapper/EmpMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/pojo/Dept.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/pojo/Dept.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/pojo/Emp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/pojo/Emp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/service/EmpService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/service/EmpService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/service/impl/EmoLogServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/service/impl/EmpServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/service/impl/EmpServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/service/impl/ClazzServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imlyb/tlias/service/impl/ClazzServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,19 +36,23 @@
     </colors>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="58" />
+    <option name="cachedIndexableFilesCount" value="69" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Exception" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HttpClientOnboardingState"><![CDATA[{
+  "isOnboardingCommentShown": true
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -90,60 +72,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000273807505295" />
-      <entry key="S5" value="1.0180132300185631" />
-      <entry key="S10" value="1.195804878146179" />
-      <entry key="S30" value="2.598656531112386" />
-      <entry key="S60" value="5.780692786263771" />
-      <entry key="M2" value="12.19056553770817" />
-      <entry key="M5" value="34.17784100028673" />
-      <entry key="M10" value="69.29007372728086" />
-      <entry key="M15" value="96.82527418067683" />
-      <entry key="M30" value="156.66444678338874" />
-      <entry key="H1" value="231.61528450549415" />
-      <entry key="H2" value="332.4423056689278" />
-      <entry key="H4" value="462.164977838955" />
-      <entry key="D1" value="804.218463117784" />
-      <entry key="W1" value="1682.774311029333" />
+      <entry key="MS500" value="1.0000000000049696" />
+      <entry key="S2" value="1.0015000022976976" />
+      <entry key="S5" value="1.0863238753900955" />
+      <entry key="S10" value="1.4511320223713997" />
+      <entry key="S30" value="2.8057744241220965" />
+      <entry key="S60" value="3.7739351873360674" />
+      <entry key="M2" value="4.951438128207694" />
+      <entry key="M5" value="8.1348294132177" />
+      <entry key="M10" value="15.583630294107648" />
+      <entry key="M15" value="23.152983053665064" />
+      <entry key="M30" value="39.34583947130418" />
+      <entry key="H1" value="54.63559343568395" />
+      <entry key="H2" value="65.67403530107168" />
+      <entry key="H4" value="75.77909882464267" />
+      <entry key="D1" value="439.46077145040186" />
+      <entry key="W1" value="1807.6222693063908" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.00744248435971826" />
-      <entry key="MS500" value="0.37526977437859277" />
-      <entry key="S2" value="0.7826831915571343" />
-      <entry key="S5" value="0.9097654522261783" />
-      <entry key="S10" value="1.0436312735729283" />
-      <entry key="S30" value="2.000972653016128" />
-      <entry key="S60" value="3.3920289905879546" />
-      <entry key="M2" value="6.402844770025116" />
-      <entry key="M5" value="16.45408994835406" />
-      <entry key="M10" value="29.684505644418362" />
-      <entry key="M15" value="39.63874321429663" />
-      <entry key="M30" value="61.91322220321025" />
-      <entry key="H1" value="90.83846244293045" />
-      <entry key="H2" value="133.0898542340366" />
-      <entry key="H4" value="191.87891717465484" />
-      <entry key="D1" value="359.0974412354003" />
-      <entry key="W1" value="892.6470144316256" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="2.7296151406862053E-185" />
+      <entry key="S2" value="7.22812000967339E-47" />
+      <entry key="S5" value="3.4963116865546487E-19" />
+      <entry key="S10" value="5.912961767637813E-10" />
+      <entry key="S30" value="8.393378794557498E-4" />
+      <entry key="S60" value="0.02908334416913543" />
+      <entry key="M2" value="0.1933270091291939" />
+      <entry key="M5" value="1.2512140754808097" />
+      <entry key="M10" value="4.439561068344206" />
+      <entry key="M15" value="7.933304590392949" />
+      <entry key="M30" value="15.385450885523154" />
+      <entry key="H1" value="22.016681471625866" />
+      <entry key="H2" value="26.532443352791923" />
+      <entry key="H4" value="31.98500543334297" />
+      <entry key="D1" value="238.309430542102" />
+      <entry key="W1" value="1001.2598708621499" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.06606546991242264" />
-      <entry key="MS500" value="0.6520520982046374" />
-      <entry key="S2" value="1.3897276369854552" />
-      <entry key="S5" value="1.7343035422556021" />
-      <entry key="S10" value="2.118418095046456" />
-      <entry key="S30" value="4.496425993613431" />
-      <entry key="S60" value="9.063296596808483" />
-      <entry key="M2" value="18.471212050478076" />
-      <entry key="M5" value="50.48473883558552" />
-      <entry key="M10" value="98.83073566749682" />
-      <entry key="M15" value="136.33350598187556" />
-      <entry key="M30" value="218.477520234612" />
-      <entry key="H1" value="322.3830257861609" />
-      <entry key="H2" value="465.48179340885645" />
-      <entry key="H4" value="654.0080838274505" />
-      <entry key="D1" value="1163.304755613983" />
-      <entry key="W1" value="2575.4175040960413" />
+      <entry key="MS100" value="0.0022126638384683556" />
+      <entry key="MS500" value="0.2944306974006734" />
+      <entry key="S2" value="0.7378062005912535" />
+      <entry key="S5" value="0.9625038061049666" />
+      <entry key="S10" value="1.3656881141964088" />
+      <entry key="S30" value="2.749417281988008" />
+      <entry key="S60" value="3.7640419800137357" />
+      <entry key="M2" value="5.1181887504900745" />
+      <entry key="M5" value="9.361894112926345" />
+      <entry key="M10" value="19.98936951368646" />
+      <entry key="M15" value="31.04898416812809" />
+      <entry key="M30" value="54.69805856737666" />
+      <entry key="H1" value="76.62953332782413" />
+      <entry key="H2" value="92.19308672271698" />
+      <entry key="H4" value="107.75639471419798" />
+      <entry key="D1" value="677.7631297595211" />
+      <entry key="W1" value="2808.877941665188" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -165,6 +147,7 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Downloaded.Files.Path.Enabled": "false",
+    "HTTP 请求.generated-requests | #2.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -196,7 +179,7 @@
     "project.structure.last.edited": "项目",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "settings.editor.selected.configurable": "settings.sync",
     "应用程序.EmpDemo.executor": "Run"
   }
 }]]></component>
@@ -216,6 +199,19 @@
       <recent name="D:\Projects\Tlias\src\main\java\com\imlyb\tlias\pojo" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="configurationStatuses">
+      <map>
+        <entry key="HttpClient.HttpRequestRunConfigurationType">
+          <value>
+            <map>
+              <entry key="generated-requests | #2" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="RunManager" selected="Spring Boot.TliasApplication">
     <configuration name="EmpDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.imlyb.tlias.controller.EmpDemo" />
@@ -230,6 +226,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" executionIdentifier="#2" index="2" runType="运行单个请求">
+      <method v="2" />
+    </configuration>
     <configuration name="TliasApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Tlias" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.imlyb.tlias.TliasApplication" />
@@ -239,6 +238,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP 请求.generated-requests | #2" />
         <item itemvalue="应用程序.EmpDemo" />
       </list>
     </recent_temporary>

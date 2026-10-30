@@ -8,22 +8,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
 @Slf4j
 @RestController
 public class DeptController {
+
     private final DeptService deptService;
 
     @Autowired
     public DeptController(DeptService deptService) {
         this.deptService = deptService;
     }
+
 //  列名属性名匹配映射  @Results({
 //            @org.apache.ibatis.annotations.Result(column = "dept_id", property = "deptId"),
 //            @org.apache.ibatis.annotations.Result(column = "dept_name", property = "deptName")
 //    })
 
-
     //    @RequestMapping(value = "/depts",method = RequestMethod.GET)
+
     @GetMapping("/depts")
     public Result list() {
         List<Dept> deptList = deptService.findAll();
@@ -39,7 +42,6 @@ public class DeptController {
     }
 
     @PostMapping("/depts")
-
     public Result createDept(@RequestBody Dept dept) {
         deptService.createDept(dept);
         log.info("创建部门：{}", dept.getName());
@@ -56,7 +58,7 @@ public class DeptController {
     @PutMapping("/depts")
     public Result updateDept(@RequestParam String name, @RequestParam Integer id) {
         deptService.updateDept(name, id);
-        log.info("根据id修改部门名称{}", id);
+        log.info("根据id修改部门名称：{}", id);
         return Result.success();
     }
 

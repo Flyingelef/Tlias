@@ -19,5 +19,5 @@ public interface ClazzMapper {
 
      void updateById(Clazz clazz);
 
-     List<Clazz> findClazzList();
+     List<String> findClazzList();
 }

@@ -1,8 +1,6 @@
 package com.imlyb.tlias.service;
 
-import com.imlyb.tlias.pojo.Emp;
-import com.imlyb.tlias.pojo.EmpQueryParam;
-import com.imlyb.tlias.pojo.PageResult;
+import com.imlyb.tlias.pojo.*;
 
 import java.util.List;
 import java.util.Map;
@@ -11,7 +9,7 @@ public interface EmpService {
 
     PageResult<Emp> page(EmpQueryParam e);
 
-    void deleteByIds(List<Integer> ids);
+    void deleteEmpByIds(List<Integer> ids);
 
     void createEmp(Emp emp);
 
@@ -19,9 +17,8 @@ public interface EmpService {
 
     void updateById(Emp emp);
 
-    List<Map<String,Object>> getGenderData();
+    GenderOption getGenderData();
 
-    List<Map<String,Object>> getJobData();
+    JobOption getJobData();
 
-    List<Map<String,Object>> getStudentDegreeData();
 }

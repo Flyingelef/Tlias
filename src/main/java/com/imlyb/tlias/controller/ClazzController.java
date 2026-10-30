@@ -14,12 +14,12 @@ public class ClazzController {
 
     @Autowired
     private ClazzService clazzService;
+
     //3.6 查询所有班级
     @GetMapping("/clazzs/list")
     public Result findClazzList(){
         return Result.success(clazzService.findClazzList());
     }
-
 
     //3.5 修改班级
     @PutMapping("/clazzs")
@@ -27,7 +27,6 @@ public class ClazzController {
         clazzService.updateById(clazz);
         return Result.success();
     }
-
 
     //3.4 根据id查询
     @GetMapping("/clazzs/{id}")
@@ -45,11 +44,9 @@ public class ClazzController {
     //3.2 根据id删除班级
     @DeleteMapping("/clazzs/{id}")
     public Result deleteById(@PathVariable Integer id) {
-
         clazzService.deleteById(id);
         return Result.success();
     }
-
 
     //3.1 班级列表查询
     @GetMapping("/clazzs")

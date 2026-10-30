@@ -18,5 +18,5 @@ public interface ClazzService {
 
     void updateById(Clazz clazz);
 
-    List<Clazz> findClazzList();
+    List<String> findClazzList();
 }

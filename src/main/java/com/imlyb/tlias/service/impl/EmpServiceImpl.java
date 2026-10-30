@@ -7,6 +7,7 @@ import com.imlyb.tlias.mapper.EmpMapper;
 import com.imlyb.tlias.pojo.*;
 import com.imlyb.tlias.service.EmpLogService;
 import com.imlyb.tlias.service.EmpService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -53,9 +54,9 @@ public class EmpServiceImpl implements EmpService {
 
     @Transactional
     @Override
-    public void deleteByIds(List<Integer> ids) {
+    public void deleteEmpByIds(@Param("ids") List<Integer> ids) {
         if (!CollectionUtils.isEmpty(ids)) {
-            empMapper.deleteByIds(ids);
+            empMapper.deleteEmpByIds(ids);
             empExprMapper.deleteByEmpIds(ids);
         }
     }
@@ -110,18 +111,24 @@ public class EmpServiceImpl implements EmpService {
     }
 
     @Override
-    public List<Map<String, Object>> getGenderData() {
-        return empMapper.getGenderData();
+    public GenderOption getGenderData() {
+        List<Map<String, Object>> list = empMapper.getGenderData();
+        GenderOption genderOption = new GenderOption();
+
+        genderOption.setGenderList(list.stream().map(dataMap -> dataMap.get("gender")).toList());
+        genderOption.setDataList(list.stream().map(dataMap -> dataMap.get("num")).toList());
+        return genderOption;
     }
 
     @Override
-    public List<Map<String, Object>> getJobData() {
-        return empMapper.getJobData();
+    public JobOption getJobData() {
+        List<Map<String,Object>> list = empMapper.getJobData();
+        JobOption jobOption = new JobOption();
+        jobOption.setJobList(list.stream().map(dataList -> dataList.get("pos")).toList());
+        jobOption.setDataList(list.stream().map(dataMap->dataMap.get("num")).toList());
+        return jobOption;
     }
 
-    @Override
-    public List<Map<String, Object>> getStudentDegreeData() {
-        return empMapper.getStudentDegreeData();
-    }
+
 
 }

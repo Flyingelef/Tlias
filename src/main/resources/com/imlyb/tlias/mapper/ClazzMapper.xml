@@ -16,10 +16,8 @@
             <if test="endDate != null">end_date = #{endDate},</if>
             <if test="masterId != null and masterId !=''">master_id = #{masterId},</if>
             <if test="subject != null ">subject = #{subject},</if>
-            <if test="masterName != null and masterName !=''">master_name = #{masterName},</if>
             <if test="createTime != null ">create_time = #{createTime},</if>
-            <if test="updateTime != null">update_time = #{updateTime},</if>
-            <if test="status != null">status = #{status}</if>
+            <if test="updateTime != null">update_time = #{updateTime}</if>
         </set>
         where id = #{id}
     </update>
@@ -40,9 +38,9 @@
         c.update_time,
         e.name as master_name,
         case
-        when curdate() &lt; c.begin_date then '未开始'
+        when curdate() &lt; c.begin_date then '未开班'
         when curdate() &gt; c.end_date then '已结束'
-        else '进行中'
+        else '在读中'
         end as status
         from clazz c
         left join emp e on c.master_id = e.id
@@ -72,6 +70,7 @@
         from tlias.clazz c where id = #{id}
     </select>
     <select id="findClazzList" resultType="com.imlyb.tlias.pojo.Clazz">
-        select * from tlias.clazz
+        select c.name from tlias.clazz c
     </select>
+
 </mapper>

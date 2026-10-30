@@ -2,6 +2,7 @@ package com.imlyb.tlias.mapper;
 
 import com.imlyb.tlias.pojo.Emp;
 import com.imlyb.tlias.pojo.EmpQueryParam;
+import org.apache.ibatis.annotations.MapKey;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
 
@@ -17,16 +18,16 @@ public interface EmpMapper {
 
     Long countAll();
 
-    void deleteByIds(List<Integer> ids);
+    void deleteEmpByIds(List<Integer> ids);
 
     @Options(useGeneratedKeys = true , keyProperty = "id")
     void createEmp(Emp emp);
 
     void updateById(Emp emp);
 
+    @MapKey("gender")
     List<Map<String, Object>> getGenderData();
-
+    @MapKey("pos")
     List<Map<String,Object>> getJobData();
 
-    List<Map<String, Object>> getStudentDegreeData();
 }

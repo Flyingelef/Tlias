@@ -19,10 +19,11 @@ public class Clazz {
     private LocalDate endDate;
     private Integer masterId;
     private Integer subject;
-    private String masterName;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime updateTime;
+
+    private String masterName;
     private String status;
 }
