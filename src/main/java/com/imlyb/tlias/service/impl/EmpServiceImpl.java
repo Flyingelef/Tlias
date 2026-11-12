@@ -7,6 +7,8 @@ import com.imlyb.tlias.mapper.EmpMapper;
 import com.imlyb.tlias.pojo.*;
 import com.imlyb.tlias.service.EmpLogService;
 import com.imlyb.tlias.service.EmpService;
+import com.imlyb.tlias.utils.JwtUtils;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,9 +17,11 @@ import org.springframework.util.CollectionUtils;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Slf4j
 @Service
 public class EmpServiceImpl implements EmpService {
     private final EmpMapper empMapper;
@@ -129,6 +133,22 @@ public class EmpServiceImpl implements EmpService {
         return jobOption;
     }
 
+    @Override
+    public LoginInfo Login(Emp emp) {
+
+        Emp e =  empMapper.selectByUsernameAndPassword(emp);
+        if (e!=null) {
+            log.info("登陆成功,{}",e);
+            //设置自定义信息
+            Map<String,Object> claims = new HashMap<>();
+            claims.put("id",e.getId());
+            claims.put("username",e.getUsername());
+            //生成Jwt令牌
+            String token = JwtUtils.generateToken(claims);
+            return new LoginInfo(e.getId(),e.getUsername(),e.getName(),token);
+        }
+        return null;
+    }
 
 
 }

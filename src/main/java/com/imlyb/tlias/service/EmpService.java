@@ -21,4 +21,5 @@ public interface EmpService {
 
     JobOption getJobData();
 
+    LoginInfo Login(Emp emp);
 }

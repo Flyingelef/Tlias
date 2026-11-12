@@ -4,17 +4,17 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.imlyb.tlias.mapper.StudentMapper">
     <insert id="createStu">
-        insert into tlias.student (id, name, no, gender, phone, degree, id_card, is_college, address, graduation_date,
-                                   violation_count, violation_score, clazz_id, clazz_name, create_time, update_time)
-        values (#{id}, #{name}, #{no}, #{gender}, #{phone}, #{degree}, #{idCard}, #{isCollege}, #{address},
-                #{graduationDate}, #{violationCount}, #{violationScore}, #{clazzId}, #{clazzName}, #{createTime},
+        insert into tlias.student (name, no, gender, phone, degree, id_card, is_college, address, graduation_date,
+                                   clazz_id, create_time, update_time)
+        values (#{name}, #{no}, #{gender}, #{phone}, #{degree}, #{idCard}, #{isCollege}, #{address},
+                #{graduationDate}, #{clazzId}, #{createTime},
                 #{updateTime})
     </insert>
     <update id="updateStu">
         update tlias.student
         <set>
             <if test="name != null and name !=''">name = #{name},</if>
-            <if test="no != null and no !=''"> no = #{no},</if>
+            <if test="no != null and no !=''">no = #{no},</if>
             <if test="gender != null ">gender = #{gender},</if>
             <if test="phone != null and phone !=''">phone = #{phone},</if>
             <if test="degree != null ">degree = #{degree},</if>
@@ -81,7 +81,6 @@
                violation_count,
                violation_score,
                clazz_id,
-               clazz_name,
                create_time,
                update_time
         from tlias.student s
@@ -89,14 +88,14 @@
     </select>
     <select id="getStudentDegreeData" resultType="java.util.Map">
         select (case
-            when degree = '1' then '初中'
-            when degree = '2' then '高中'
-            when degree = '3' then '专科'
-            when degree = '4' then '本科'
-            when degree = '5' then '硕士'
-            else '其他'
-        end) degree,
-        count(*) num
+                    when degree = '1' then '初中'
+                    when degree = '2' then '高中'
+                    when degree = '3' then '专科'
+                    when degree = '4' then '本科'
+                    when degree = '5' then '硕士'
+                    else '其他'
+            end)        degree,
+               count(*) num
         from tlias.student
         group by degree
         order by degree
@@ -105,10 +104,12 @@
         select c.name name, count(s.id) num
         from tlias.clazz c
                  left join tlias.student s on c.id = s.clazz_id
-        group by c.id,c.name
+        group by c.id, c.name
         order by num
     </select>
     <select id="countStuByClazzId" resultType="java.lang.Integer">
-        select count(s.id) from tlias.student s where s.clazz_id = #{clazzId}
+        select count(s.id)
+        from tlias.student s
+        where s.clazz_id = #{clazzId}
     </select>
 </mapper>

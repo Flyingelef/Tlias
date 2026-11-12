@@ -70,7 +70,7 @@
         from tlias.clazz c where id = #{id}
     </select>
     <select id="findClazzList" resultType="com.imlyb.tlias.pojo.Clazz">
-        select * from tlias.clazz
+        select c.name from tlias.clazz c
     </select>
 
 </mapper>

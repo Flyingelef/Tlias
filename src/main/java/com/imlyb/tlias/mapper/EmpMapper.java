@@ -30,4 +30,5 @@ public interface EmpMapper {
     @MapKey("pos")
     List<Map<String,Object>> getJobData();
 
+    Emp selectByUsernameAndPassword(Emp emp);
 }

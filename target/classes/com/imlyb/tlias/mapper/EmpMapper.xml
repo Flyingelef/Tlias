@@ -116,5 +116,8 @@
         count(*) num
         from emp group by job order by num
     </select>
+    <select id="selectByUsernameAndPassword" resultType="com.imlyb.tlias.pojo.Emp">
+        select e.id, e.name ,e.username from emp e where username = #{username} and password = #{password}
+    </select>
 
 </mapper>
