@@ -4,8 +4,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/tlias?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&allowMultiQueries=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=Asia/Shanghai
-    username: root
-    password: CHANGEME
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD}
 mybatis:
   configuration:
     log-impl:  org.apache.ibatis.logging.slf4j.Slf4jImpl
